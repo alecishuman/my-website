@@ -1,1 +1,4 @@
-**Alec Situ's Personal Website**
+## **Alec Situ's Personal Website**
+# **Skills Used:**
+* ReactJS, NextJS
+* CSS (TailwindCSS)
