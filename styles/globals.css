@@ -2,12 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-blue: #1aa1db;
+  --primary-gray: #333333;
+}
+
+.form-button {
+  background-color: var(--primary-blue);
+}
+
+.form-button:active {
+  background-color: #10719b;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  background-color: var(--primary-gray);
 }
 
 a {

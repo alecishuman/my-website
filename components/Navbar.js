@@ -1,19 +1,18 @@
 import React from "react";
-import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/navbar.module.css";
 
-export default function Navbar(props) {
+export default function Navbar() {
   return (
-    <div className={styles.navContainer}>
-      <Link href="/" className={styles.link}>
-        Home
-      </Link>
-      <Link href="/Projects" className={styles.link}>
+    <div className="flex flex-row align-middle justify-end w-full pr-2">
+      <a href="" className="px-4 py-6">
         Projects
-      </Link>
-      <Link href="/About" className={styles.link}>
+      </a>
+      <a href="" className="px-4 py-6">
         About
-      </Link>
+      </a>
+      <a href="" className="px-4 py-6">
+        Contact
+      </a>
     </div>
   );
 }

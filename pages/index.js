@@ -13,7 +13,7 @@ export default function Home() {
         <title>Alec Website</title>
       </Head>
       <main>
-        <Navbar cur="Home" />
+        <Navbar />
         <div className="projects">
           <Project title="hi" description="hi" />
         </div>
