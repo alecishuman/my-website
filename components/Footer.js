@@ -1,30 +1,17 @@
 import React from "react";
-import styles from "../styles/footer.module.css";
 
 import ContactForm from "./ContactForm";
 
 export default function Footer() {
   return (
-    <footer className="w-auto border-t-2 border-t-white">
-      <div className="footer-container flex flex-row justify-items-center align-middle mt-12">
-        <h1 className="text-8xl px-12 border-r-2 border-r-white">ALEC SITU</h1>
-        <div className="flex-col flex px-12 border-r-2 border-r-white">
-          <h2 className="text-lg">Contact Method: </h2>
-          <span>Email: aasitu@gmail.com</span>
-          <span>Phone: +1 (236)-518-2397</span>
-          <a
-            href="https://www.linkedin.com/in/alec-situ/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            LinkedIn
-          </a>
-        </div>
+    <div className="page footer-container flex flex-row items-center justify-center">
+      <footer className="h-fit w-5/6 mt-12 flex flex-col justify-evenly lg:flex-row">
         <ContactForm />
-      </div>
-      <div className="copyright flex flex-row justify-center text-white text-sm">
-        Made by Alec Situ
-      </div>
-    </footer>
+        <div className="socials-contact flex flex-col gap-4 lg:gap-6 py-9 mx-12 w-full max-lg:w-auto">
+          <p className="form-header text-3xl md:text-4xl">Or....</p>
+          <p className="text-3xl md:text-4xl font-bold">Find my socials!</p>
+        </div>
+      </footer>
+    </div>
   );
 }

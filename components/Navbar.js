@@ -1,16 +1,16 @@
 import React from "react";
-import styles from "../styles/navbar.module.css";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-row align-middle justify-end w-full pr-2">
-      <a href="" className="px-4 py-6">
+    <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6">
+      {/* shrink while scrolling name */}
+      <a href="" className="navbar-element xl:text-lg px-4 xl:px-6">
         Projects
       </a>
-      <a href="" className="px-4 py-6">
+      <a href="" className="navbar-element xl:text-lg px-4 xl:px-6">
         About
       </a>
-      <a href="" className="px-4 py-6">
+      <a href="" className="navbar-element xl:text-lg px-4 xl:px-6">
         Contact
       </a>
     </div>

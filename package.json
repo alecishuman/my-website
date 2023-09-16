@@ -6,9 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@rooks/use-window-size": "^4.11.2",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "rooks": "^7.14.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
