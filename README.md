@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+## **Alec Situ's Personal Website**
+# **Skills Used:**
+* ReactJS, NextJS
+* CSS (TailwindCSS)
