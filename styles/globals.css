@@ -7,7 +7,11 @@
 @import url("/styles/components/navbar.css");
 @import url("/styles/components/star.css");
 
-/* Scrolling vertical snap */
+:root {
+  --primary-blue: #1AA1DB;
+  --primary-gray: #333333;
+  --primary-background: rgb(17 24 39);
+}
 
 html,
 body {
@@ -16,10 +20,11 @@ body {
   margin: 0;
   /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: 'Raleway', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.1rem;
   color: white;
-  background-color: black;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   overflow: hidden;
 }
 
@@ -55,10 +60,7 @@ button {
 }
 
 
-:root {
-  --primary-blue: #1AA1DB;
-  --primary-gray: #333333;
-}
+
 
 /* Make custom scrollbar */
 main {
@@ -94,7 +96,7 @@ main::-webkit-scrollbar {
 
 .main-name {
   color: var(--primary-blue);
-  font-family: 'Judson', serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.5rem;
   font-size: 8.5rem;
   width: 26rem;
@@ -103,7 +105,6 @@ main::-webkit-scrollbar {
 }
 
 .subtitle {
-  
   font-size: 1.5rem;
   margin-top: 1rem;
   width: 30rem;
@@ -112,7 +113,8 @@ main::-webkit-scrollbar {
 /* Contact form */
 
 .contact-form {
-  background-color: #1f1f1f;
+  background-color: var(--primary-gray);
+  color: aliceblue;
 }
 
 .form-header {
@@ -120,21 +122,28 @@ main::-webkit-scrollbar {
 }
 
 .form-button {
-  background-color: var(--primary-blue);
+  background-color: #EAF6FF;
+  color: var(--primary-background);
 }
 
 .topButton {
-  background-color: var(--primary-blue);
+  background-color: #EAF6FF;
   width: 50px;
   height: 50px;
 }
 
 /* Projects */
-
-.projects {
-  
+.project-page-title {
+  background-color: var(--primary-background);
+  color: aliceblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.5rem;
+  padding: 12px 12px;
+  z-index: 10;
 }
 
 .project {
-  background-color: #1f1f1f;
+  background-color: var(--primary-gray);
+  width: 340px;
+  height: 60vh;
 }

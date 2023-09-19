@@ -62,7 +62,7 @@ export default function ContactForm() {
           type="text"
           name="name"
           placeholder="Enter your name:"
-          className="py-2 px-4 rounded-3xl outline-none focus:outline-none text-gray-600"
+          className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none text-gray-600"
           required
         />
         <p className="text-lg md:text-xl">Email:</p>
@@ -70,14 +70,14 @@ export default function ContactForm() {
           type="email"
           name="email"
           placeholder="Enter your email:"
-          className="py-2 px-4 rounded-3xl outline-none focus:outline-none h-10 text-gray-600"
+          className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none h-10 text-gray-600"
           required
         />
         <p className="text-lg md:text-xl">Message:</p>
         <textarea
           name="message"
           placeholder="What would you like to tell me?"
-          className="py-2 px-4 rounded-3xl outline-none focus:outline-none min-h-fit text-gray-600"
+          className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none min-h-fit text-gray-600"
           required
         ></textarea>
 

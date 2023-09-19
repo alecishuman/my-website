@@ -5,6 +5,7 @@ export default function BackToTop() {
 
   const handleScroll = () => {
     if (window.scrollY > 300) {
+      console.log(window.scrollY);
       setIsVisible(true);
     } else {
       setIsVisible(false);

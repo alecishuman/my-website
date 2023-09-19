@@ -35,7 +35,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="page flex justify-center items-center">
+        <div className="page flex flex-col justify-end items-center">
+          <div className="project-page-title text-5xl font-semibold text-center">
+            Notable Experience
+          </div>
           <div className="projects flex flex-row justify-center w-9/10 flex-wrap items-center gap-8 my-16 h-fit">
             {pastProjects.map((project) => (
               <Project
