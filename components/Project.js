@@ -1,11 +1,18 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
 
 export default function Project(props) {
   return (
-    <div className="bg-blue-300 w-96 flex-col p-2">
-      <h2 className="underline">{props.title}</h2>
-      <p>{props.description}</p>
+    <div className="project flex-col p-4 w-80 rounded-lg">
+      <div className="flex-row justify-between items-center flex">
+        <div className="flex flex-col gap-1">
+          <div className="underline text-xl">{props.title}</div>
+          <div className="text-sm">{props.company}</div>
+        </div>
+        <div className="italic flex text-end text-sm text-gray-500">
+          {props.time}
+        </div>
+      </div>
+      <div>{props.description}</div>
     </div>
   );
 }

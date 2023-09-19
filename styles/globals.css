@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Judson&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url("/styles/components/footer.css");
 @import url("/styles/components/navbar.css");
 @import url("/styles/components/star.css");
@@ -15,8 +16,7 @@ body {
   margin: 0;
   /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: 'Geologica', sans-serif;
-  font-family: 'Judson', serif;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 0.1rem;
   color: white;
   background-color: black;
@@ -94,6 +94,8 @@ main::-webkit-scrollbar {
 
 .main-name {
   color: var(--primary-blue);
+  font-family: 'Judson', serif;
+  letter-spacing: 0.5rem;
   font-size: 8.5rem;
   width: 26rem;
   line-height: 10rem;
@@ -101,6 +103,7 @@ main::-webkit-scrollbar {
 }
 
 .subtitle {
+  
   font-size: 1.5rem;
   margin-top: 1rem;
   width: 30rem;
@@ -124,4 +127,14 @@ main::-webkit-scrollbar {
   background-color: var(--primary-blue);
   width: 50px;
   height: 50px;
+}
+
+/* Projects */
+
+.projects {
+  
+}
+
+.project {
+  background-color: #1f1f1f;
 }

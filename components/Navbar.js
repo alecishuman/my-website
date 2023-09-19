@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6">
+    <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6 z-10 bg-black">
       {/* shrink while scrolling name */}
       <a href="" className="navbar-element xl:text-lg px-4 xl:px-6">
         Projects

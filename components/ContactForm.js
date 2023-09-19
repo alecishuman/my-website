@@ -83,7 +83,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="form-button tracking-wider w-24 align-middle justify-center rounded-3xl mt-2"
+          className="form-button tracking-wider w-fit align-middle justify-center rounded-2xl mt-2"
         >
           Send it!
         </button>
