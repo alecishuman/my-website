@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     setWindowWidth(window.innerWidth);
   }, []);
-  const numStars = Math.floor((100 * windowWidth) / 1920);
+  const numStars = Math.floor((50 * windowWidth) / 1920);
 
   const starArray = Array(numStars).fill(null);
   return (
