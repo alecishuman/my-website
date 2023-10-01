@@ -3,9 +3,9 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url("/styles/components/footer.css");
-@import url("/styles/components/navbar.css");
-@import url("/styles/components/star.css");
+@import url("../styles/components/footer.css");
+@import url("../styles/components/navbar.css");
+@import url("../styles/components/projects.css");
 
 :root {
   --primary-blue: #1AA1DB;
@@ -69,11 +69,10 @@ main {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 main div {
-  z-index: 0;
+  z-index: 1;
 }
 
 main::-webkit-scrollbar {
@@ -110,57 +109,17 @@ main::-webkit-scrollbar {
   width: 30rem;
 }
 
-/* Contact form */
-
-.contact-form {
-  background-color: var(--primary-gray);
-  color: aliceblue;
-}
-
-.form-header {
-  color: var(--primary-blue);
-}
-
-.form-button {
-  background-color: #EAF6FF;
-  color: var(--primary-background);
-}
-
-.topButton {
-  background-color: #EAF6FF;
-  width: 50px;
-  height: 50px;
-}
-
-/* Projects */
-.project-page-title {
-  background-color: var(--primary-background);
-  color: aliceblue;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  letter-spacing: 0.5rem;
-  padding: 12px 12px;
-  z-index: 10;
-}
-
-.project {
-  background-color: var(--primary-gray);
-  width: 340px;
-  height: 60vh;
-}
 
 /* Animations */
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
   100% {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
     transform: scale(1);
   }
 }

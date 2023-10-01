@@ -5,15 +5,15 @@ export default function Star() {
   const [windowWidth, setWindowWidth] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const delay = Math.random() * 2;
-  const starSize = Math.random() * 3 + 2;
+  const starSize = Math.random() * 2 + 2.7;
   useEffect(() => {
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
   }, []);
   const starStyle = {
     position: "absolute",
-    left: Math.floor(Math.random() * (windowWidth - 40) + 20),
-    top: Math.floor(Math.random() * (windowHeight - 40) + 20),
+    left: Math.floor(Math.random() * (windowWidth - 20) + 20),
+    top: Math.floor(Math.random() * (windowHeight - 40) + 40),
     width: starSize,
     height: starSize,
     borderRadius: "50%",

@@ -1,1 +1,27 @@
+:root {
+    --primary-blue: #1AA1DB;
+    --primary-gray: #232233;
+    --primary-background: rgb(17 24 39);
+  }
 
+/* Contact form */
+
+.contact-form {
+    background-color: var(--primary-gray);
+    color: aliceblue;
+}
+
+.form-header {
+    color: var(--primary-blue);
+}
+
+.form-button {
+    background-color: #FFF !important;
+    color: var(--primary-background);
+}
+
+.topButton {
+    background-color: #EAF6FF;
+    width: 50px;
+    height: 50px;
+}
