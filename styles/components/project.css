@@ -1,0 +1,17 @@
+:root {
+    --primary-blue: #1AA1DB;
+    --primary-gray: #232233;
+    --primary-background: rgb(17 24 39);
+  }
+
+.project-card {
+    background-color: var(--primary-gray);
+}
+
+.project-title {
+    color: var(--primary-blue);
+}
+
+.project-more-btn {
+    background-color: var(--primary-blue);
+}

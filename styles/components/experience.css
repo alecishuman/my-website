@@ -5,8 +5,8 @@
   }
 
   
-/* Projects */
-.projects-container {
+/* Experience */
+.experience-container {
     display: flex;
     justify-content: center;
     width: fit-content;
@@ -15,7 +15,7 @@
     overflow: hidden;
 }
 
-.projects-mask-content {
+.experience-mask-content {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 80%;
@@ -26,46 +26,63 @@
     overscroll-behavior-inline: contain;
     scroll-snap-type: x mandatory;
     width: 85%;
-    scrollbar-width: none;
     -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    
+  }
+
+  .experience-mask-content::-webkit-scrollbar {
+    
+    width: 70%;
+    height: 0.2rem;
   }
   
-.projects-mask-content::-webkit-scrollbar {
-    display: none !important;
+  .experience-mask-content::-webkit-scrollbar-track {
+    background: var(--primary-gray);
+    border-radius: 100vw;
   }
   
-  .project {
+  .experience-mask-content::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 100vw;
+  }
+  
+  .experience {
     scroll-snap-align: center;
     flex: 0 0 auto;
-  
+    margin-bottom: 1rem;
   }
   
-  .project-page-title {
+  .experience-page-title {
     background-color: var(--primary-background);
     color: aliceblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 0.5rem;
     padding: 0.75rem 0.75rem;
-    z-index: 2;
+    z-index: 10;
   }
   
-  .project-card {
+  .experience-card {
     background-color: var(--primary-gray);
     width: 340px;
     height: 60vh;
   }
   
-  .project-page {
+  .experience-page {
     background-color: var(--primary-gray);
     height: min(70vh, 600px);
   }
   
-  .project-title {
+  .experience-title {
     color: var(--primary-blue);
   }
   
-  .project-scroll-button {
+.experience-link {
+  background-color: var(--primary-blue);
+  font-weight: 500;
+}
+
+  .experience-scroll-button {
     display: flex;
     position: absolute;
     justify-content: center;
@@ -73,15 +90,15 @@
     height: 100%;
     top: 50%;
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.25;
     transform: translateY(-50%);
     z-index: 2;
   }
 
-  .project-scroll-button-left {
+  .experience-scroll-button-left {
     left: 7.5%;
   }
 
-  .project-scroll-button-right {
+  .experience-scroll-button-right {
     right: 7.5%;
   }

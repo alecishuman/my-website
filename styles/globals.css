@@ -5,7 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url("../styles/components/footer.css");
 @import url("../styles/components/navbar.css");
-@import url("../styles/components/projects.css");
+@import url("../styles/components/experience.css");
+@import url("../styles/components/project.css");
 
 :root {
   --primary-blue: #1AA1DB;

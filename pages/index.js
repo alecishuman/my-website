@@ -5,14 +5,16 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ProjectCard from "../components/ProjectCard";
+import ExperienceCard from "../components/ExperienceCard";
+import { pastExperience } from "./api/past-experience";
 import { pastProjects } from "./api/past-projects";
 import BackToTop from "../components/BackToTop";
 import Star from "../components/Star";
-import ProjectPage from "../components/ProjectPage";
+import ExperiencePage from "../components/ExperiencePage";
 
 import leftChevron from "../public/left-chevron.svg";
 import rightChevron from "../public/right-chevron.svg";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
   // Stars
@@ -25,7 +27,6 @@ export default function Home() {
 
   // Horizontal scroll
   const scrollRef = useRef(null);
-  const [tracker, setTracker] = useState(1);
   const [first, setFirst] = useState(true);
   const [last, setLast] = useState(false);
   const scrollLeft = () => {
@@ -36,7 +37,6 @@ export default function Home() {
         left: currentScrollLeft - scrollRefWidth / 2,
         behavior: "smooth",
       });
-      setTracker((prev) => prev - 1);
     }
   };
   const scrollRight = () => {
@@ -47,14 +47,16 @@ export default function Home() {
         left: currentScrollRight + scrollRefWidth / 2,
         behavior: "smooth",
       });
-      setTracker((prev) => prev + 1);
     }
   };
 
   useEffect(() => {
-    setFirst(tracker === 1);
-    setLast(tracker === 3);
-  }, [tracker]);
+    const left = scrollRef.current.scrollLeft;
+    const width = scrollRef.current.offsetWidth;
+    setFirst(left < width);
+    setLast(left > 2 * width);
+    console.log(left, width);
+  }, [scrollRef.current]);
 
   return (
     <div className="">
@@ -75,16 +77,30 @@ export default function Home() {
             <Star />
           ))}
         </div>
+        <div className="page flex flex-col justify-center items-center">
+          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
+            Projects
+          </div>
+          <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">
+            {pastProjects.map((project) => (
+              <ProjectCard
+                name={project.name}
+                descripiton={project.description}
+                link={project.link}
+              />
+            ))}
+          </div>
+        </div>
         <div className="page h-fit flex flex-col justify-center items-center">
-          <div className="project-page-title text-4xl md:text-5xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
             Notable Experience
           </div>
-          <div className="projects-container">
-            <div className="projects-mask-content" ref={scrollRef}>
-              {pastProjects.map((project, index) => (
-                <div className="project">
+          <div className="experience-container">
+            <div className="experience-mask-content" ref={scrollRef}>
+              {pastExperience.map((project, index) => (
+                <div className="experience">
                   {windowWidth > 1024 ? (
-                    <ProjectPage
+                    <ExperiencePage
                       logo={project.logo}
                       title={project.title}
                       company={project.company}
@@ -95,7 +111,7 @@ export default function Home() {
                       key={index}
                     />
                   ) : (
-                    <ProjectCard
+                    <ExperienceCard
                       logo={project.logo}
                       title={project.title}
                       company={project.company}
@@ -109,9 +125,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {windowWidth > 1024 && !first && (
+            {/* {windowWidth > 1024 && !first && (
               <button
-                className="project-scroll-button project-scroll-button-left rounded-bl-2xl rounded-tl-2xl"
+                className="experience-scroll-button experience-scroll-button-left rounded-bl-2xl rounded-tl-2xl"
                 onClick={scrollLeft}
               >
                 <Image src={leftChevron} alt="left chevron" width={48} />
@@ -119,12 +135,12 @@ export default function Home() {
             )}
             {windowWidth > 1024 && !last && (
               <button
-                className="project-scroll-button project-scroll-button-right rounded-br-2xl rounded-tr-2xl"
+                className="experience-scroll-button experience-scroll-button-right rounded-br-2xl rounded-tr-2xl"
                 onClick={scrollRight}
               >
                 <Image src={rightChevron} alt="right chevron" width={48} />
               </button>
-            )}
+            )} */}
           </div>
         </div>
         <Footer />

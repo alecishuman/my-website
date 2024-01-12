@@ -1,24 +1,29 @@
-import React from "react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 
-export default function ProjectCard(props) {
+export default function ProjectCard({ name, descripiton, link }) {
+  const card = useRef();
+  const hidden = useRef();
+  //   useEffect(() => {
+  //     addEventListener(hoverCard);
+  //     return removeEventListener(hoverCard);
+  //   }, []);
+
+  //   const hoverCard = onmouseover(() => {
+  //     hidden.current.style.setProperty("display", "block");
+  //   });
+
   return (
-    <div className="project-card flex flex-col gap-2 p-8 rounded-lg w-11/12">
-      <div className="flex justify-center w-full mb-4">
-        <Image src={props.logo} alt="logo" width={64} />
-      </div>
-      <div className="project-title text-2xl font-semibold">{props.title}</div>
-      {props.company && <div className="text-sm">{props.company}</div>}
-      <div className="italic flex text-end text-sm text-gray-500">
-        {props.time}
-      </div>
-      <div className="flex flex-col gap-1">
-        {props.activities.map((activity) => (
-          <div className="flex">
-            <span className="mr-2">&#8226;</span>
-            <div className="inline text-sm">{activity}</div>
-          </div>
-        ))}
+    <div
+      ref={card}
+      className="project-card flex flex-col gap-4 w-60 h-80 rounded-xl p-6 justify-end"
+    >
+      <div className="project-title font-semibold">{name}</div>
+      <div ref={hidden} className="project-hide hidden flex flex-col gap-4">
+        <hr />
+        <div className="text-sm">{descripiton}</div>
+        <button className="project-more-btn text-white px-4 py-2 w-fit rounded-lg text-sm">
+          More
+        </button>
       </div>
     </div>
   );
