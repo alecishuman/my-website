@@ -27,36 +27,38 @@ export default function Home() {
 
   // Horizontal scroll
   const scrollRef = useRef(null);
-  const [first, setFirst] = useState(true);
-  const [last, setLast] = useState(false);
-  const scrollLeft = () => {
+  const [pause, setPause] = useState(false);
+  const scroll = () => {
     if (scrollRef.current) {
-      const currentScrollLeft = scrollRef.current.scrollLeft;
-      const scrollRefWidth = scrollRef.current.offsetWidth;
+      const currentScroll = scrollRef.current.scrollLeft;
+      const width = scrollRef.current.offsetWidth;
+      var scrollAmt = currentScroll + width / 2;
+      if (currentScroll > width) {
+        scrollAmt = 0;
+      }
       scrollRef.current.scrollTo({
-        left: currentScrollLeft - scrollRefWidth / 2,
+        left: scrollAmt,
         behavior: "smooth",
       });
     }
   };
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      const currentScrollRight = scrollRef.current.scrollLeft;
-      const scrollRefWidth = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollTo({
-        left: currentScrollRight + scrollRefWidth / 2,
-        behavior: "smooth",
-      });
-    }
-  };
+  // const handleSpace = (e) => {
+  //   if (e.key === " " || e.key === "Spacebar") {
+  //     console.log("spacebar");
+  //     e.preventDefault();
+  //     setPause(!pause);
+  //   }
+  // };
 
   useEffect(() => {
-    const left = scrollRef.current.scrollLeft;
-    const width = scrollRef.current.offsetWidth;
-    setFirst(left < width);
-    setLast(left > 2 * width);
-    console.log(left, width);
-  }, [scrollRef.current]);
+    if (!pause) {
+      scroll();
+      const carousel = setInterval(() => {
+        scroll();
+      }, 2000);
+      return () => clearInterval(carousel);
+    }
+  }, [pause]);
 
   return (
     <div className="">
@@ -77,26 +79,24 @@ export default function Home() {
             <Star />
           ))}
         </div>
-        <div className="page flex flex-col justify-center items-center">
-          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
-            Projects
-          </div>
-          <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">
-            {pastProjects.map((project) => (
-              <ProjectCard
-                name={project.name}
-                descripiton={project.description}
-                link={project.link}
-              />
-            ))}
-          </div>
-        </div>
+
         <div className="page h-fit flex flex-col justify-center items-center">
-          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center">
             Notable Experience
           </div>
+          <div className="text-center mb-8">
+            (Hover to pause, click to scroll)
+          </div>
           <div className="experience-container">
-            <div className="experience-mask-content" ref={scrollRef}>
+            <div
+              className="experience-mask-content"
+              ref={scrollRef}
+              onMouseEnter={() => setPause(true)}
+              onMouseLeave={() => setPause(false)}
+              onClick={scroll}
+              // onKeyDown={handleSpace}
+              tabIndex="0"
+            >
               {pastExperience.map((project, index) => (
                 <div className="experience">
                   {windowWidth > 1024 ? (
@@ -125,22 +125,20 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {/* {windowWidth > 1024 && !first && (
-              <button
-                className="experience-scroll-button experience-scroll-button-left rounded-bl-2xl rounded-tl-2xl"
-                onClick={scrollLeft}
-              >
-                <Image src={leftChevron} alt="left chevron" width={48} />
-              </button>
-            )}
-            {windowWidth > 1024 && !last && (
-              <button
-                className="experience-scroll-button experience-scroll-button-right rounded-br-2xl rounded-tr-2xl"
-                onClick={scrollRight}
-              >
-                <Image src={rightChevron} alt="right chevron" width={48} />
-              </button>
-            )} */}
+          </div>
+        </div>
+        <div className="page flex flex-col justify-center items-center">
+          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
+            Projects
+          </div>
+          <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">
+            {pastProjects.map((project) => (
+              <ProjectCard
+                name={project.name}
+                description={project.description}
+                link={project.link}
+              />
+            ))}
           </div>
         </div>
         <Footer />
