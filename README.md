@@ -1,4 +1,4 @@
 ## **Alec Situ's Personal Website**
 # **Skills Used:**
-* ReactJS, NextJS
+* ReactJS, NextJS, EmailJS
 * CSS (TailwindCSS)
