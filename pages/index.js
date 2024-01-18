@@ -42,13 +42,6 @@ export default function Home() {
       });
     }
   };
-  // const handleSpace = (e) => {
-  //   if (e.key === " " || e.key === "Spacebar") {
-  //     console.log("spacebar");
-  //     e.preventDefault();
-  //     setPause(!pause);
-  //   }
-  // };
 
   useEffect(() => {
     if (!pause) {
