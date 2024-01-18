@@ -16,8 +16,7 @@
 }
 
 .form-button {
-    background-color: #FFF !important;
-    color: var(--primary-background);
+    background-color: var(--primary-blue) !important;
 }
 
 .topButton {

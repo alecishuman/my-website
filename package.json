@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@rooks/use-window-size": "^4.11.2",
     "next": "latest",
     "react": "18.2.0",
