@@ -27,7 +27,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-form px-10 py-12 mx-12 lg:w-full w-auto rounded-3xl">
+    <div
+      className="contact-form px-10 py-12 mx-12 lg:w-full w-auto rounded-3xl"
+      id="contact"
+    >
       {submitted ? (
         <div className="flex items-start flex-col gap-4 md:gap-6">
           <div className="form-header text-3xl md:text-4xl font-bold">

@@ -24,6 +24,7 @@ export default function ProjectCard({ name, description, link }) {
       className="project-card flex flex-col gap-4 w-72 h-[360px] rounded-xl p-6 overflow-hidden"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      id="projects"
     >
       <div ref={card} className="card-content flex flex-col gap-4">
         <div ref={hidden} className="project-title font-semibold text-lg">

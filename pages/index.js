@@ -68,7 +68,7 @@ export default function Home() {
 
       <main>
         <Navbar />
-        <div className="page">
+        <div className="page" id="home">
           <div className="main-page">
             <div className="main-name">ALEC SITU</div>
             <div className="subtitle">
@@ -80,7 +80,10 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="page h-fit flex flex-col justify-center items-center">
+        <div
+          className="page h-fit flex flex-col justify-center items-center"
+          id="experience"
+        >
           <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center">
             Notable Experience
           </div>
@@ -127,7 +130,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="page flex flex-col justify-center items-center">
+        <div
+          className="page flex flex-col justify-center items-center"
+          id="projects"
+        >
           <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
             Projects
           </div>
