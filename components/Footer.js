@@ -10,6 +10,9 @@ export default function Footer() {
         <div className="socials-contact flex flex-col gap-4 lg:gap-6 py-9 mx-12 w-full max-lg:w-auto bg-gray-900">
           <p className="form-header text-3xl md:text-4xl">Or....</p>
           <p className="text-3xl md:text-4xl font-bold">Find my socials!</p>
+          <a href="">Linkedin</a>
+          <a href="">Email</a>
+          <a href="">Phone</a>
         </div>
       </footer>
     </div>
