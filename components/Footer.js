@@ -1,18 +1,36 @@
 import React from "react";
+import gmail from "../public/gmail.svg";
+import linkedin from "../public/linkedin_icon.svg";
+import phone from "../public/phone.svg";
 
 import ContactForm from "./ContactForm";
+import ContactMethod from "./ContactMethod";
 
 export default function Footer() {
+  const contacts = [
+    {
+      name: "LinkedIn",
+      image: linkedin,
+      link: "https://www.linkedin.com/in/alec-situ/",
+    },
+    { name: "aasitu@gmail.com", image: gmail },
+    { name: "(236) 518-2397", image: phone },
+    // Add more logos as needed
+  ];
   return (
     <div className="page footer-container flex flex-row items-center justify-center">
-      <footer className="h-fit w-5/6 mt-12 flex flex-col justify-evenly lg:flex-row">
+      <footer className="h-fit w-3/4 max-w-[1000px] mt-12 flex flex-col justify-center">
         <ContactForm />
-        <div className="socials-contact flex flex-col gap-4 lg:gap-6 py-9 mx-12 w-full max-lg:w-auto bg-gray-900">
-          <p className="form-header text-3xl md:text-4xl">Or....</p>
-          <p className="text-3xl md:text-4xl font-bold">Find my socials!</p>
-          <a href="">Linkedin</a>
-          <a href="">Email</a>
-          <a href="">Phone</a>
+        <div className="flex flex-row w-full justify-center mt-10 gap-4">
+          {contacts.map((contact) => {
+            return contact.link ? (
+              <a href={contact.link} target="_blank" rel="noopener noreferrer">
+                <ContactMethod name={contact.name} image={contact.image} />
+              </a>
+            ) : (
+              <ContactMethod name={contact.name} image={contact.image} />
+            );
+          })}
         </div>
       </footer>
     </div>
