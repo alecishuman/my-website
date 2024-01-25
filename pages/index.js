@@ -19,7 +19,9 @@ import ProjectCard from "../components/ProjectCard";
 export default function Home() {
   // Stars
   const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
   useEffect(() => {
+    setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
   }, []);
   const numStars = Math.floor((60 * windowWidth) / 1920);
@@ -65,7 +67,7 @@ export default function Home() {
           <div className="main-page">
             <div className="main-name">ALEC SITU</div>
             <div className="subtitle">
-              Software Engineer, ML/AI Developer, Web Developer
+              Software Engineer, ML/AI Developer, Full-Stack Web Developer
             </div>
           </div>
           {starArray.map((num, index) => (

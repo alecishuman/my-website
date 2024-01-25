@@ -13,26 +13,29 @@ export default function Navbar() {
       </a> */}
 
       <div
-        onClick={() =>
-          experience().scrollIntoView({ block: "end", behavior: "smooth" })
-        }
-        className="navbar-element xl:text-lg px-4 xl:px-6 transition-all"
+        onClick={() => {
+          experience().scrollIntoView({ block: "center", behavior: "smooth" });
+          experience().scrollIntoView({ block: "center", behavior: "smooth" });
+        }}
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
       >
         Experience
       </div>
       <div
-        onClick={() =>
-          projects().scrollIntoView({ block: "end", behavior: "smooth" })
-        }
-        className="navbar-element xl:text-lg px-4 xl:px-6"
+        onClick={() => {
+          projects().scrollIntoView({ block: "center", behavior: "smooth" });
+          projects().scrollIntoView({ block: "center", behavior: "smooth" });
+        }}
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
       >
         Projects
       </div>
       <div
-        onClick={() =>
-          contact().scrollIntoView({ block: "end", behavior: "smooth" })
-        }
-        className="navbar-element xl:text-lg px-4 xl:px-6"
+        onClick={() => {
+          contact().scrollIntoView({ block: "center", behavior: "smooth" });
+          contact().scrollIntoView({ block: "center", behavior: "smooth" });
+        }}
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
       >
         Contact
       </div>

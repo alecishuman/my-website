@@ -4,6 +4,14 @@
     --primary-background: rgb(17 24 39);
   }
 
+.navbar-element {
+  transition: background-color 0.5s ease;
+}
+
 .navbar-element:hover {
-    color: var(--primary-blue);
+    background-color: var(--primary-blue);
+}
+
+.active {
+  background-color: var(--primary-blue);
 }
