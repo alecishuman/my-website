@@ -17,7 +17,7 @@ export default function Navbar() {
           experience().scrollIntoView({ block: "center", behavior: "smooth" });
           experience().scrollIntoView({ block: "center", behavior: "smooth" });
         }}
-        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-xl py-2 hover:cursor-pointer"
       >
         Experience
       </div>
@@ -26,7 +26,7 @@ export default function Navbar() {
           projects().scrollIntoView({ block: "center", behavior: "smooth" });
           projects().scrollIntoView({ block: "center", behavior: "smooth" });
         }}
-        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-xl py-2 hover:cursor-pointer"
       >
         Projects
       </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
           contact().scrollIntoView({ block: "center", behavior: "smooth" });
           contact().scrollIntoView({ block: "center", behavior: "smooth" });
         }}
-        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-full py-2 hover:cursor-pointer"
+        className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-xl py-2 hover:cursor-pointer"
       >
         Contact
       </div>

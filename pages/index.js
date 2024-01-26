@@ -14,6 +14,7 @@ import ExperiencePage from "../components/ExperiencePage";
 
 import leftChevron from "../public/left-chevron.svg";
 import rightChevron from "../public/right-chevron.svg";
+import cursorSvg from "../public/cursor.svg";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
@@ -54,6 +55,10 @@ export default function Home() {
       return () => clearInterval(carousel);
     }
   }, [pause]);
+
+  // Hover and click effects
+  const [hoverExp, setHoverExp] = useState(true);
+  const [clickExp, setClickExp] = useState(false);
 
   return (
     <div className="">
@@ -107,6 +112,8 @@ export default function Home() {
                       activities={project.activities}
                       skills={project.skills}
                       key={index}
+                      hoverExp={setHoverExp}
+                      clickExp={setClickExp}
                     />
                   ) : (
                     <ExperienceCard
@@ -123,6 +130,32 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            {hoverExp && (
+              <div className="hover-cursor absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
+                <div className="text-[#1AA1DB] bg-[#232233] px-4 py-2 text-xl font-semibold">
+                  Pause!
+                </div>
+                <Image
+                  src={cursorSvg}
+                  alt="cursor hover"
+                  width={50}
+                  className=""
+                />
+              </div>
+            )}
+            {clickExp && (
+              <div className="absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
+                <div className="text-[#1AA1DB] bg-[#232233] px-4 text-xl font-semibold">
+                  Next!
+                </div>
+                <Image
+                  src={cursorSvg}
+                  alt="cursor hover"
+                  width={50}
+                  className=""
+                />
+              </div>
+            )}
           </div>
         </div>
         <div

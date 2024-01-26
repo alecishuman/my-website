@@ -102,3 +102,20 @@
   .experience-scroll-button-right {
     right: 7.5%;
   }
+
+  .hover-cursor {
+    animation: circle 2s forwards infinite;
+  animation-timing-function: linear;
+  }
+
+  @keyframes circle { 
+    0% { 
+        transform: rotate(0deg)  
+              translateY(50px) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(-360deg)  
+              translateY(50px) rotate(360deg); 
+    } 
+}
