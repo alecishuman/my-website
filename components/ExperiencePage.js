@@ -19,6 +19,9 @@ export default function ExperiencePage({
       console.log("changed hover");
       clickExp(true);
     }, 4000);
+    setTimeout(() => {
+      clickExp(false);
+    }, 8000);
   }, []);
   return (
     <div className="experience-page flex flex-row p-8 rounded-2xl">

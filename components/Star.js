@@ -1,7 +1,7 @@
 import useWindowSize from "@rooks/use-window-size";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 
-export default function Star() {
+function Star() {
   const [windowWidth, setWindowWidth] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const delay = Math.random() * 2;
@@ -25,3 +25,5 @@ export default function Star() {
   };
   return <div className="star" style={starStyle}></div>;
 }
+
+export default memo(Star);

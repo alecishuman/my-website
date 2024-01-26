@@ -84,11 +84,8 @@ export default function Home() {
           className="page h-fit flex flex-col justify-center items-center"
           id="experience"
         >
-          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center">
+          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
             Notable Experience
-          </div>
-          <div className="text-center mb-8">
-            (Hover to pause, click to scroll)
           </div>
           <div className="experience-container">
             <div
@@ -132,28 +129,30 @@ export default function Home() {
             </div>
             {hoverExp && (
               <div className="hover-cursor absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
-                <div className="text-[#1AA1DB] bg-[#232233] px-4 py-2 text-xl font-semibold">
-                  Pause!
-                </div>
                 <Image
                   src={cursorSvg}
                   alt="cursor hover"
                   width={50}
                   className=""
                 />
+                <div className="text-[#1AA1DB] bg-[#232233] px-4 py-2 text-xl font-semibold">
+                  Pause!
+                </div>
               </div>
             )}
             {clickExp && (
               <div className="absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
-                <div className="text-[#1AA1DB] bg-[#232233] px-4 text-xl font-semibold">
+                <div className="click-ripple relative">
+                  <Image
+                    src={cursorSvg}
+                    alt="cursor hover"
+                    width={50}
+                    className="z-20 click-cursor"
+                  />
+                </div>
+                <div className="text-[#1AA1DB] bg-[#232233] px-4 text-xl font-semibold mt-1">
                   Next!
                 </div>
-                <Image
-                  src={cursorSvg}
-                  alt="cursor hover"
-                  width={50}
-                  className=""
-                />
               </div>
             )}
           </div>
