@@ -5,11 +5,12 @@
   }
 
 .navbar-element {
-  transition: background-color 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .navbar-element:hover {
     background-color: var(--primary-blue);
+    transform: scale(1.05);
 }
 
 .active {
