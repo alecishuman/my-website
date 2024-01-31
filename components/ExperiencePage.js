@@ -12,17 +12,19 @@ export default function ExperiencePage({
   skills,
   hoverExp,
   clickExp,
+  inView,
 }) {
   useEffect(() => {
-    setTimeout(() => {
-      hoverExp(false);
-      console.log("changed hover");
-      clickExp(true);
-    }, 4000);
-    setTimeout(() => {
-      clickExp(false);
-    }, 8000);
-  }, []);
+    if (inView) {
+      setTimeout(() => {
+        hoverExp(false);
+        clickExp(true);
+      }, 4000);
+      setTimeout(() => {
+        clickExp(false);
+      }, 8000);
+    }
+  }, [inView]);
   return (
     <div className="experience-page flex flex-row p-8 rounded-2xl">
       <div className="flex w-1/2 flex-col gap-2 justify-end p-4">

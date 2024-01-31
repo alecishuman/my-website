@@ -96,9 +96,23 @@ export default function Home() {
     }
   }, [pause]);
 
-  // Hover and click effects
+  // Hover and click experience
   const [hoverExp, setHoverExp] = useState(true);
   const [clickExp, setClickExp] = useState(false);
+  const [inView, setInView] = useState(false);
+  const experienceRef = useRef();
+  useEffect(() => {
+    if (experienceRef && !inView) {
+      const observer = new IntersectionObserver(
+        ([entry]) => entry.isIntersecting && setInView(true)
+      );
+      observer.observe(experienceRef.current);
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  });
 
   return (
     <div className="">
@@ -139,7 +153,7 @@ export default function Home() {
           <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
             Notable Experience
           </div>
-          <div className="experience-container">
+          <div className="experience-container" ref={experienceRef}>
             <div
               className="experience-mask-content"
               ref={scrollRef}
@@ -163,6 +177,7 @@ export default function Home() {
                       key={index}
                       hoverExp={setHoverExp}
                       clickExp={setClickExp}
+                      inView={inView}
                     />
                   ) : (
                     <ExperienceCard
@@ -179,7 +194,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            {hoverExp && (
+            {inView && hoverExp && (
               <div className="hover-cursor absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
                 <Image
                   src={cursorSvg}
@@ -192,7 +207,7 @@ export default function Home() {
                 </div>
               </div>
             )}
-            {clickExp && (
+            {inView && clickExp && (
               <div className="absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
                 <div className="click-ripple relative">
                   <Image
