@@ -28,6 +28,46 @@ export default function Home() {
   const numStars = Math.floor((60 * windowWidth) / 1920);
   const starArray = Array(numStars).fill(null);
 
+  // Typing Name
+  const text = "ALEC SITU";
+  const subtitle =
+    "Software Engineer, ML/AI Developer, Full-Stack Web Developer";
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSubtitle, setCurrentSubtitle] = useState("");
+  const [currentSubtitleIndex, setCurrentSubtitleIndex] = useState(0);
+
+  useEffect(() => {
+    let timeout;
+    let subtitleTimeout;
+
+    if (currentIndex < text.length) {
+      timeout = setTimeout(() => {
+        setCurrentText((prevText) => prevText + text[currentIndex]);
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }, 150);
+    } else if (currentSubtitleIndex < subtitle.length) {
+      subtitleTimeout = setTimeout(() => {
+        setCurrentSubtitle(
+          (prevText) => prevText + subtitle[currentSubtitleIndex]
+        );
+        setCurrentSubtitleIndex((prevIndex) => prevIndex + 1);
+      }, 100);
+    } else {
+      setTimeout(() => {
+        setCurrentIndex(0);
+        setCurrentText("");
+        setCurrentSubtitleIndex(0);
+        setCurrentSubtitle("");
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+      clearTimeout(subtitleTimeout);
+    };
+  }, [currentIndex, currentSubtitleIndex, subtitle, text]);
+
   // Horizontal scroll
   const scrollRef = useRef(null);
   const [pause, setPause] = useState(false);
@@ -66,13 +106,25 @@ export default function Home() {
         <title>Alec Website</title>
       </Head>
 
+      {/* TODO: Add typing text for front page */}
       <main>
         <Navbar />
         <div className="page" id="home">
           <div className="main-page">
-            <div className="main-name">ALEC SITU</div>
+            <div className="main-name">
+              {currentText}
+              {currentIndex < text.length && "|"}
+            </div>
+
             <div className="subtitle">
-              Software Engineer, ML/AI Developer, Full-Stack Web Developer
+              {currentSubtitle}
+              {currentSubtitleIndex <= subtitle.length &&
+                currentIndex >= text.length &&
+                (currentSubtitleIndex < subtitle.length ? (
+                  "|"
+                ) : (
+                  <span className="flashing-cursor">|</span>
+                ))}
             </div>
           </div>
           {starArray.map((num, index) => (

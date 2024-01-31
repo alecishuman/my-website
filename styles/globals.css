@@ -110,6 +110,11 @@ main::-webkit-scrollbar {
   width: 30rem;
 }
 
+.flashing-cursor {
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
 
 /* Animations */
 
@@ -122,6 +127,12 @@ main::-webkit-scrollbar {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    display: none;
   }
 }
 
