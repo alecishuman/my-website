@@ -1,13 +1,12 @@
 :root {
-    --primary-blue: #1AA1DB;
+  --primary-blue: #1aa1db;
     --primary-gray: #232233;
     --primary-background: rgb(17 24 39);
   }
 
-  
 /* Experience */
 .experience-container {
-    display: flex;
+  display: flex;
     justify-content: center;
     width: fit-content;
     position: relative;
@@ -16,7 +15,7 @@
 }
 
 .experience-mask-content {
-    display: grid;
+  display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 80%;
     padding-left: 10vw;
@@ -26,14 +25,16 @@
     overscroll-behavior-inline: contain;
     scroll-snap-type: x mandatory;
     width: 85%;
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    
-  }
+}
 
-  .experience-mask-content::-webkit-scrollbar {
-    
-    width: 70%;
+.experience-mask-content::-webkit-scrollbar {
+  width: 70%;
     height: 0.2rem;
   }
   
@@ -56,7 +57,7 @@
   .experience-page-title {
     background-color: var(--primary-background);
     color: aliceblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
     letter-spacing: 0.5rem;
     padding: 0.75rem 0.75rem;
     z-index: 10;
@@ -82,62 +83,79 @@
   font-weight: 500;
 }
 
-  .experience-scroll-button {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    top: 50%;
-    background-color: white;
-    opacity: 0.25;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
+.experience-scroll-button {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 50%;
+  background-color: white;
+  opacity: 0.25;
+  transform: translateY(-50%);
+  z-index: 2;
+}
 
-  .experience-scroll-button-left {
-    left: 7.5%;
-  }
+.experience-scroll-button-left {
+  left: 7.5%;
+}
 
-  .experience-scroll-button-right {
-    right: 7.5%;
-  }
+.experience-scroll-button-right {
+  right: 7.5%;
+}
 
-  .hover-cursor {
-    animation: circle 2s forwards infinite;
+.hover-cursor {
+  animation: circle 2s forwards infinite;
   animation-timing-function: linear;
-  }
+}
 
-  .click-cursor {
-    animation: click 1.2s ease-out forwards infinite;
+.click-cursor {
+  animation: click 1.2s forwards infinite;
     animation-timing-function: linear;
   }
 
-  .click-ripple::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    opacity: 0;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 0px solid grey;
-    animation: ripple 1.2s ease-out forwards infinite;
-    animation-timing-function: linear;
-  }
+.click-ripple::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0px solid grey;
+  animation: ripple 1.2s ease-out forwards infinite;
+  animation-timing-function: linear;
+}
 
-  @keyframes circle { 
-    0% { 
-        transform: rotate(0deg)  
-              translateY(50px) rotate(0deg); 
-    } 
+.scroll-cursor {
+  animation: up-down 1.5s ease forwards infinite;
+}
 
-    100% { 
-        transform: rotate(-360deg)  
-              translateY(50px) rotate(360deg); 
-    } 
+.scroll-ripple::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 45px;
+  opacity: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0px solid grey;
+  animation: ripple 1.5s ease-out forwards infinite;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translateY(50px) rotate(0deg);
+    }
+
+                                100% {
+    transform: rotate(-360deg) translateY(50px) rotate(360deg);
+    }
 }
 
 @keyframes ripple {
@@ -149,11 +167,20 @@
 
   100% {
     border-width: 1px;
-    transform:scale(7);
+    transform: scale(7);
     opacity: 0.15;
   }
 }
 
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+}
 @keyframes click {
   0% {
     transform: translateY(0px) translateX(0px);

@@ -15,6 +15,7 @@ import ExperiencePage from "../components/ExperiencePage";
 import leftChevron from "../public/left-chevron.svg";
 import rightChevron from "../public/right-chevron.svg";
 import cursorSvg from "../public/cursor.svg";
+import downCursor from "../public/down_cursor.svg";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
@@ -96,7 +97,8 @@ export default function Home() {
     }
   }, [pause]);
 
-  // Hover and click experience
+  // User hints
+  const [scrollExp, setScrollExp] = useState(true);
   const [hoverExp, setHoverExp] = useState(true);
   const [clickExp, setClickExp] = useState(false);
   const [inView, setInView] = useState(false);
@@ -114,13 +116,18 @@ export default function Home() {
     }
   });
 
+  useEffect(() => {
+    setTimeout(() => {
+      setScrollExp(false);
+    }, 6000);
+  }, []);
+
   return (
     <div className="">
       <Head>
-        <title>Alec Website</title>
+        <title>Alec's Website</title>
       </Head>
 
-      {/* TODO: Add typing text for front page */}
       <main>
         <Navbar />
         <div className="page" id="home">
@@ -144,6 +151,22 @@ export default function Home() {
           {starArray.map((num, index) => (
             <Star />
           ))}
+          {scrollExp && (
+            <div className="fixed right-[10vw] bottom-[5vh] z-10 flex flex-col justify-center items-center">
+              <div className="scroll-ripple relative">
+                <Image
+                  src={downCursor}
+                  alt="cursor hover"
+                  width={100}
+                  className="z-20 scroll-cursor"
+                />
+              </div>
+
+              <div className="text-[#1AA1DB] px-4 text-2xl font-semibold mt-1">
+                Next Page!
+              </div>
+            </div>
+          )}
         </div>
 
         <div
