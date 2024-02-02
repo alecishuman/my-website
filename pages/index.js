@@ -130,8 +130,14 @@ export default function Home() {
 
       <main>
         <Navbar />
-        <div className="page" id="home">
-          <div className="main-page">
+        <div className="page home-page" id="home">
+          <div
+            className={
+              windowWidth > 1024
+                ? "main-page"
+                : "absolute w-3/5 min-w-[250px] h-fit top-[40%] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
+            }
+          >
             <div className="main-name">
               {currentText}
               {currentIndex < text.length && "|"}
