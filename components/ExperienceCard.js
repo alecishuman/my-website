@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function ExperienceCard(props) {
   return (
-    <div className="experience-card flex flex-col gap-2 p-8 rounded-lg w-11/12">
-      <div className="flex justify-center w-full mb-4">
+    <div className="experience-card flex flex-col gap-2 p-8 rounded-lg">
+      <div className="flex justify-center w-full mt-6 mb-6">
         <Image src={props.logo} alt="logo" width={64} />
       </div>
       <div className="experience-title text-2xl font-semibold">

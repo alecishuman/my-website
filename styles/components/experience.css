@@ -1,83 +1,79 @@
 :root {
   --primary-blue: #1aa1db;
-    --primary-gray: #232233;
-    --primary-background: rgb(17 24 39);
-  }
+  --primary-gray: #232233;
+  --primary-background: rgb(17 24 39);
+}
 
 /* Experience */
 .experience-container {
   display: flex;
-    justify-content: center;
-    width: fit-content;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .experience-mask-content {
   display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 80%;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    gap: 4rem;
-    overflow-x: scroll;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: x mandatory;
-    width: 85%;
+  grid-auto-flow: column;
+  grid-auto-columns: 80%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  gap: 4rem;
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x mandatory;
+  width: 85%;
   -webkit-mask: linear-gradient(90deg,
-        transparent,
-        white 20%,
-        white 80%,
-        transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+      transparent,
+      white 20%,
+      white 80%,
+      transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
 .experience-mask-content::-webkit-scrollbar {
   width: 70%;
-    height: 0.2rem;
-  }
-  
-  .experience-mask-content::-webkit-scrollbar-track {
-    background: var(--primary-gray);
-    border-radius: 100vw;
-  }
-  
-  .experience-mask-content::-webkit-scrollbar-thumb {
-    background: var(--primary-blue);
-    border-radius: 100vw;
-  }
-  
-  .experience {
-    scroll-snap-align: center;
-    flex: 0 0 auto;
-    margin-bottom: 1rem;
-  }
-  
-  .experience-page-title {
-    background-color: var(--primary-background);
-    color: aliceblue;
+  height: 0.2rem;
+}
+
+.experience-mask-content::-webkit-scrollbar-track {
+  background: var(--primary-gray);
+  border-radius: 100vw;
+}
+
+.experience-mask-content::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 100vw;
+
+}
+
+.experience-page-title {
+  background-color: var(--primary-background);
+  color: aliceblue;
   font-family: Georgia, "Times New Roman", Times, serif;
-    letter-spacing: 0.5rem;
-    padding: 0.75rem 0.75rem;
-    z-index: 10;
-  }
-  
-  .experience-card {
-    background-color: var(--primary-gray);
-    width: 340px;
-    height: 60vh;
-  }
-  
-  .experience-page {
-    background-color: var(--primary-gray);
-    height: min(70vh, 600px);
-  }
-  
-  .experience-title {
-    color: var(--primary-blue);
-  }
-  
+  letter-spacing: 0.5rem;
+  padding: 0.75rem 0.75rem;
+  z-index: 10;
+}
+
+.experience-card {
+  background-color: var(--primary-gray);
+  width: 85%;
+  height: fit-content;
+  min-height: 60vh;
+}
+
+.experience-page {
+  background-color: var(--primary-gray);
+  height: min(70vh, 600px);
+}
+
+.experience-title {
+  color: var(--primary-blue);
+}
+
 .experience-link {
   background-color: var(--primary-blue);
   font-weight: 500;
@@ -111,8 +107,8 @@
 
 .click-cursor {
   animation: click 1.2s forwards infinite;
-    animation-timing-function: linear;
-  }
+  animation-timing-function: linear;
+}
 
 .click-ripple::after {
   content: "";
@@ -148,14 +144,51 @@
   animation-delay: 0.3s;
   animation-timing-function: linear;
 }
+
+/* Responsive */
+
+@media only screen and (max-width: 1024px) {
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10rem;
+  }
+
+  .experience {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .experience-container {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .experience {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animations */
 @keyframes circle {
   0% {
     transform: rotate(0deg) translateY(50px) rotate(0deg);
-    }
+  }
 
-                                100% {
+  100% {
     transform: rotate(-360deg) translateY(50px) rotate(360deg);
-    }
+  }
 }
 
 @keyframes ripple {
@@ -181,13 +214,16 @@
     transform: translateY(-40px);
   }
 }
+
 @keyframes click {
   0% {
     transform: translateY(0px) translateX(0px);
   }
+
   50% {
     transform: translateY(10px) translateX(10px);
   }
+
   100% {
     transform: translateY(0px) translateX(0px);
   }

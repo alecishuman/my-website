@@ -27,7 +27,7 @@ export default function BackToTop() {
 
   return (
     <button
-      className={"topButton fixed bottom-5 right-5 rounded-xl cursor-pointer opacity-80 transition-all duration-300 hover:opacity-100 hover:scale-110".concat(
+      className={"topButton z-20 fixed bottom-5 right-5 rounded-xl cursor-pointer opacity-80 transition-all duration-300 hover:opacity-100 hover:scale-110".concat(
         " ",
         isVisible ? "block" : "hidden"
       )}
@@ -35,7 +35,7 @@ export default function BackToTop() {
         window.scrollTo({ top: 0 });
       }}
     >
-      Hi
+      T
     </button>
   );
 }

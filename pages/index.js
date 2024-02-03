@@ -130,12 +130,14 @@ export default function Home() {
 
       <main>
         <Navbar />
+
+        {/* Change title to different animation with fixed height and swiping "roles" */}
         <div className="page home-page" id="home">
           <div
             className={
               windowWidth > 1024
                 ? "main-page"
-                : "absolute w-3/5 min-w-[250px] h-fit top-[30%] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
+                : "absolute w-3/5 min-w-[250px] h-fit top-[25vh] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
             }
           >
             {windowWidth < 1024 && (
