@@ -25,6 +25,7 @@ export default function ContactForm() {
         }
       );
   };
+  // Create mobile contact form
 
   return (
     <div className="contact-form px-10 py-12 w-full rounded-3xl" id="contact">
