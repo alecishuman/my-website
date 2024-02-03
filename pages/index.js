@@ -135,9 +135,13 @@ export default function Home() {
             className={
               windowWidth > 1024
                 ? "main-page"
-                : "absolute w-3/5 min-w-[250px] h-fit top-[40%] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
+                : "absolute w-3/5 min-w-[250px] h-fit top-[30%] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
             }
           >
+            {windowWidth < 1024 && (
+              <div className="subtitle mb-8">Welcome! This is</div>
+            )}
+
             <div className="main-name">
               {currentText}
               {currentIndex < text.length && "|"}
@@ -157,7 +161,7 @@ export default function Home() {
           {starArray.map((num, index) => (
             <Star />
           ))}
-          {scrollExp && (
+          {scrollExp && windowWidth > 1024 && (
             <div className="fixed right-[10vw] bottom-[5vh] z-10 flex flex-col justify-center items-center">
               <div className="scroll-ripple relative">
                 <Image
@@ -183,18 +187,18 @@ export default function Home() {
             Notable Experience
           </div>
           <div className="experience-container" ref={experienceRef}>
-            <div
-              className="experience-mask-content"
-              ref={scrollRef}
-              onMouseEnter={() => setPause(true)}
-              onMouseLeave={() => setPause(false)}
-              onClick={scroll}
-              // onKeyDown={handleSpace}
-              tabIndex="0"
-            >
-              {pastExperience.map((project, index) => (
-                <div className="experience">
-                  {windowWidth > 1024 ? (
+            {windowWidth > 1024 ? (
+              <div
+                className="experience-mask-content"
+                ref={scrollRef}
+                onMouseEnter={() => setPause(true)}
+                onMouseLeave={() => setPause(false)}
+                onClick={scroll}
+                // onKeyDown={handleSpace}
+                tabIndex="0"
+              >
+                {pastExperience.map((project, index) => (
+                  <div className="experience">
                     <ExperiencePage
                       logo={project.logo}
                       title={project.title}
@@ -208,22 +212,27 @@ export default function Home() {
                       clickExp={setClickExp}
                       inView={inView}
                     />
-                  ) : (
-                    <ExperienceCard
-                      logo={project.logo}
-                      title={project.title}
-                      company={project.company}
-                      link={project.link}
-                      time={project.time}
-                      activities={project.activities}
-                      skills={project.skills}
-                      key={index}
-                    />
-                  )}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              pastExperience.map((project, index) => (
+                <div className="experience">
+                  <ExperienceCard
+                    logo={project.logo}
+                    title={project.title}
+                    company={project.company}
+                    link={project.link}
+                    time={project.time}
+                    activities={project.activities}
+                    skills={project.skills}
+                    key={index}
+                  />
                 </div>
-              ))}
-            </div>
-            {inView && hoverExp && (
+              ))
+            )}
+
+            {windowWidth > 1024 && inView && hoverExp && (
               <div className="hover-cursor absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
                 <Image
                   src={cursorSvg}
@@ -236,7 +245,7 @@ export default function Home() {
                 </div>
               </div>
             )}
-            {inView && clickExp && (
+            {windowWidth > 1024 && inView && clickExp && (
               <div className="absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
                 <div className="click-ripple relative">
                   <Image
