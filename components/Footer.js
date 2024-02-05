@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import gmail from "../public/gmail.svg";
 import linkedin from "../public/linkedin_icon.svg";
 import phone from "../public/phone.svg";
