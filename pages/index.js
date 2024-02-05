@@ -21,9 +21,7 @@ import ProjectCard from "../components/ProjectCard";
 export default function Home() {
   // Stars
   const [windowWidth, setWindowWidth] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
   useEffect(() => {
-    setWindowHeight(window.innerHeight);
     setWindowWidth(window.innerWidth);
   }, []);
   const numStars = Math.floor((60 * windowWidth) / 1920);

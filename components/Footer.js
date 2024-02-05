@@ -5,8 +5,15 @@ import phone from "../public/phone.svg";
 
 import ContactForm from "./ContactForm";
 import ContactMethod from "./ContactMethod";
+import MobileContactForm from "./MobileContactForm";
 
 export default function Footer() {
+  // Window width
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   const contacts = [
     {
       name: "LinkedIn",
@@ -20,7 +27,8 @@ export default function Footer() {
   return (
     <div className="page footer-container flex flex-row items-center justify-center">
       <footer className="h-fit w-3/4 max-w-[1000px] mt-12 flex flex-col justify-center">
-        <ContactForm />
+        {windowWidth > 1024 ? <ContactForm /> : <MobileContactForm />}
+
         <div className="flex flex-row w-full justify-center mt-10 gap-4">
           {contacts.map((contact) => {
             return contact.link ? (
