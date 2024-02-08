@@ -27,10 +27,10 @@ export default function Footer() {
   ];
   return (
     <div className="page footer-container flex flex-row items-center justify-center">
-      <footer className="h-fit w-3/4 max-w-[1000px] mt-12 flex flex-col justify-center">
-        {windowWidth > 1024 ? <ContactForm /> : <MobileContactForm />}
+      <footer className="h-fit w-10/12 max-w-[1000px] mt-12 flex flex-col justify-center">
+        {windowWidth > 640 ? <ContactForm /> : <MobileContactForm />}
 
-        <div className="flex flex-row w-full justify-center mt-10 gap-4">
+        <div className="flex flex-col sm:flex-row w-full max-sm:items-end justify-center mt-10 max-lg:mt-[60px] max-lg:mb-20 gap-4">
           {contacts.map((contact) => {
             return contact.link ? (
               <a href={contact.link} target="_blank" rel="noopener noreferrer">

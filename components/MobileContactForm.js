@@ -29,7 +29,7 @@ export default function MobileContactForm() {
 
   return (
     <div
-      className="px-2 py-3 w-full h-full justify-center items-center"
+      className="px-2 py-3 w-full mt-40 justify-center items-center"
       id="contact"
     >
       {submitted ? (
@@ -55,14 +55,14 @@ export default function MobileContactForm() {
             action=""
             ref={form}
             onSubmit={handleSubmit}
-            className=" flex flex-col gap-3 md:gap-4 w-full"
+            className=" flex flex-col gap-6 w-full"
           >
             <p className="text-lg md:text-xl">Name:</p>
             <input
               type="text"
               name="user_name"
               placeholder="Enter your name:"
-              className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none text-gray-600"
+              className="text-sm py-3 px-4 mb-4 rounded-3xl outline-none focus:outline-none text-gray-600"
               required
             />
             <p className="text-lg md:text-xl">Email:</p>
@@ -70,14 +70,14 @@ export default function MobileContactForm() {
               type="email"
               name="user_email"
               placeholder="Enter your email:"
-              className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none h-10 text-gray-600"
+              className="text-sm py-3 px-4 mb-4 rounded-3xl outline-none focus:outline-none h-10 text-gray-600"
               required
             />
             <p className="text-lg md:text-xl">Message:</p>
             <textarea
               name="message"
               placeholder="What would you like to tell me?"
-              className="text-sm py-3 px-4 rounded-3xl outline-none focus:outline-none min-h-fit text-gray-600"
+              className="text-sm py-3 px-4 mb-4 rounded-3xl outline-none focus:outline-none min-h-fit text-gray-600"
               required
             ></textarea>
 
