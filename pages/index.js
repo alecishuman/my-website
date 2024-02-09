@@ -268,6 +268,7 @@ export default function Home() {
             )}
           </div>
         </div>
+        {windowWidth < 680 && <div className="h-40"></div>}
         <div
           className="page flex flex-col justify-center items-center"
           id="projects"
