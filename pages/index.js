@@ -132,32 +132,38 @@ export default function Home() {
         {/* Change title to different animation with fixed height and swiping "roles" */}
         <div className="page home-page" id="home">
           <div
-            className={
-              windowWidth > 1024
-                ? "main-page"
-                : "absolute w-3/5 min-w-[250px] h-fit top-[25vh] left-[50px] border-l-8 border-[#1AA1DB] pl-8"
-            }
+            className={windowWidth < 1024 && "w-full h-full flex items-center"}
           >
-            {windowWidth < 1024 && (
-              <div className="subtitle mb-8">Welcome! This is</div>
-            )}
+            <div
+              className={
+                windowWidth > 1024
+                  ? "main-page"
+                  : "h-fit border-l-8 border-[#1AA1DB] pl-8 w-4/5 ml-8"
+              }
+            >
+              {windowWidth < 1024 && (
+                <div className="subtitle mb-8">Welcome! This is</div>
+              )}
 
-            <div className="main-name">
-              {currentText}
-              {currentIndex < text.length && "|"}
-            </div>
+              <div className="main-name">
+                {currentText}
+                {currentIndex < text.length && "|"}
+              </div>
 
-            <div className="subtitle">
-              {currentSubtitle}
-              {currentSubtitleIndex <= subtitle.length &&
-                currentIndex >= text.length &&
-                (currentSubtitleIndex < subtitle.length ? (
-                  "|"
-                ) : (
-                  <span className="flashing-cursor">|</span>
-                ))}
+              <div className="subtitle">
+                {windowWidth > 1024 ? currentSubtitle : subtitle}
+                {currentSubtitleIndex <= subtitle.length &&
+                  windowWidth > 1024 &&
+                  currentIndex >= text.length &&
+                  (currentSubtitleIndex < subtitle.length ? (
+                    "|"
+                  ) : (
+                    <span className="flashing-cursor">|</span>
+                  ))}
+              </div>
             </div>
           </div>
+
           {starArray.map((num, index) => (
             <Star />
           ))}

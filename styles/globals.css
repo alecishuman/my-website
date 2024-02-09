@@ -96,18 +96,19 @@ main div {
   }
 
   .main-name {
-    font-size: 50px;
+    font-size: 60px;
     letter-spacing: 0.3rem;
     line-height: normal;
     width: auto;
     font-weight: 900;
+    height: 140px;
   }
 
   .subtitle {
     font-size: 20px;
     width: 100%;
   }
-  
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -125,22 +126,22 @@ main div {
     -ms-overflow-style: none;
   }
 
-                main::-webkit-scrollbar {
-                  display: none !important;
-                }
+  main::-webkit-scrollbar {
+    display: none !important;
+  }
 
-                .page {
-                  width: 100vw;
-                  min-height: 100vh;
-                  scroll-snap-align: start;
-                  scroll-snap-stop: always;
-                }
+  .page {
+    width: 100vw;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 
-                .main-page {
-                  position: relative;
-                  top: 15vh;
-                  left: 18vw;
-                }
+  .main-page {
+    position: relative;
+    top: 15vh;
+    left: 18vw;
+  }
 }
 
 /* Animations */
