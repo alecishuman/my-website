@@ -9,6 +9,7 @@
 @import url("../styles/components/project.css");
 
 :root {
+  --secondary-blue: #6FC3FF;
   --primary-blue: #1aa1db;
   --primary-gray: #232233;
   --primary-background: rgb(17 24 39);

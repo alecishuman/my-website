@@ -4,14 +4,16 @@ import Image from "next/image";
 export default function ExperienceCard(props) {
   // Remove card, change to normal background assimilation
   return (
-    <div className="experience-card flex flex-col gap-2 p-8 rounded-lg">
-      <div className="flex justify-center w-full mt-6 mb-6">
+    <div className="experience-card flex flex-col gap-4 p-8 rounded-lg">
+      {/* <div className="flex justify-center w-full mt-6 mb-6">
         <Image src={props.logo} alt="logo" width={64} />
-      </div>
-      <div className="experience-title text-2xl font-semibold">
+      </div> */}
+      <div className="experience-title text-3xl font-semibold">
         {props.title}
       </div>
-      {props.company && <div className="text-sm">{props.company}</div>}
+      {props.company && (
+        <div className="text-lg text-[#6FC3FF]">{props.company}</div>
+      )}
       <div className="italic flex text-end text-sm text-gray-500">
         {props.time}
       </div>

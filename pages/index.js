@@ -138,7 +138,7 @@ export default function Home() {
               className={
                 windowWidth > 1024
                   ? "main-page"
-                  : "h-fit border-l-8 border-[#1AA1DB] pl-8 w-4/5 ml-8"
+                  : "h-fit border-l-8 border-[#6FC3FF] pl-8 w-4/5 ml-8"
               }
             >
               {windowWidth < 1024 && (

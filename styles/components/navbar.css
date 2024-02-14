@@ -1,16 +1,10 @@
-:root {
-    --primary-blue: #1AA1DB;
-    --primary-gray: #232233;
-    --primary-background: rgb(17 24 39);
-  }
-
 .navbar-element {
   transition: all 0.4s ease;
 }
 
 .navbar-element:hover {
-    background-color: var(--primary-blue);
-    transform: scale(1.05);
+  background-color: var(--primary-blue);
+  transform: scale(1.05);
 }
 
 .active {
