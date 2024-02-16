@@ -174,7 +174,7 @@ export default function Home() {
                 <Image
                   src={downCursor}
                   alt="cursor hover"
-                  width={100}
+                  width={80}
                   className="z-20 scroll-cursor"
                 />
               </div>
