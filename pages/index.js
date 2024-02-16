@@ -143,7 +143,7 @@ export default function Home() {
               }
             >
               {windowWidth < 1024 && (
-                <div className="subtitle mb-8">Welcome! This is</div>
+                <div className="subtitle mb-8">Hello! This is</div>
               )}
 
               <div className="main-name">
