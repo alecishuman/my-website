@@ -17,6 +17,7 @@ import rightChevron from "../public/right-chevron.svg";
 import cursorSvg from "../public/cursor.svg";
 import downCursor from "../public/down_cursor.svg";
 import ProjectCard from "../components/ProjectCard";
+import MobileNavbar from "../components/MobileNavbar";
 
 export default function Home() {
   // Stars
@@ -127,7 +128,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navbar />
+        {windowWidth < 680 ? <MobileNavbar /> : <Navbar />}
 
         {/* Change title to different animation with fixed height and swiping "roles" */}
         <div className="page home-page" id="home">
@@ -189,7 +190,7 @@ export default function Home() {
           className="page h-fit flex flex-col justify-center items-center"
           id="experience"
         >
-          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8">
             Notable Experience
           </div>
           <div className="experience-container" ref={experienceRef}>
@@ -273,7 +274,7 @@ export default function Home() {
           className="page flex flex-col justify-center items-center"
           id="projects"
         >
-          <div className="experience-page-title text-3xl lg:text-4xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8">
             Projects
           </div>
           <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">

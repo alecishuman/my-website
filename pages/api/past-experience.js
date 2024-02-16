@@ -32,6 +32,7 @@ export const pastExperience = [
   {
     logo: keseraLogo,
     title: "Lead Developer",
+    company: "Kesera",
     link: "https://www.kesera.ca/",
     time: "June 2022 - February 2023",
     activities: [

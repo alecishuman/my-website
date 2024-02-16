@@ -12,7 +12,9 @@ export default function ExperienceCard(props) {
         {props.title}
       </div>
       {props.company && (
-        <div className="text-lg text-[#6FC3FF]">{props.company}</div>
+        <div className="text-lg text-[#6FC3FF] font-semibold">
+          {props.company}
+        </div>
       )}
       <div className="italic flex text-end text-sm text-gray-500">
         {props.time}

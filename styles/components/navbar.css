@@ -10,3 +10,12 @@
 .active {
   background-color: var(--primary-blue);
 }
+
+.mobile-navbar-element {
+  width: 100%;
+  padding: 12px 10px;
+  border-top: 2px solid var(--secondary-blue);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
