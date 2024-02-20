@@ -14,6 +14,8 @@ export const pastExperience = [
       "Built front-end MVP, including pulling data from hundreds of companies using AI and AWS",
       "Created generative AI algorithms with Open AI for personalized company brand voice",
     ],
+    mobile:
+      "I was a full stack developer intern at a startup PipeIQ to build their MVP using React, Next, PostgreSQL, AWS, and OpenAI.",
     skills: ["react", "typescript", "css", "ml", "restapi", "aws"],
   },
   {
@@ -27,6 +29,8 @@ export const pastExperience = [
       "Manage user access and profiles for admins, tutors, and parents",
       "Created platforms to schedule, manage, and change classes",
     ],
+    mobile:
+      "I teamed up with 12 other UBC Launch Pad members to recreate from scratch an online tutoring platform for The C.O.D.E. Initiative.",
     skills: ["react", "css", "node", "express", "sql", "restapi"],
   },
   {
@@ -40,6 +44,8 @@ export const pastExperience = [
       "Created real-time interaction, messaging , posting, and data storage",
       "Helped design website",
     ],
+    mobile:
+      "I was the lead software developer for the web application at Kesera, mentoring 5 other highschoolers to build a social media application.",
     skills: ["react", "html", "css", "firebase"],
   },
 ];

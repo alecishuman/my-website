@@ -19,14 +19,7 @@ export default function ExperienceCard(props) {
       <div className="italic flex text-end text-sm text-gray-500">
         {props.time}
       </div>
-      <div className="flex flex-col gap-1">
-        {props.activities.map((activity) => (
-          <div className="flex">
-            <span className="mr-2">&#8226;</span>
-            <div className="inline text-sm">{activity}</div>
-          </div>
-        ))}
-      </div>
+      <div className="text-sm text-gray-100">{props.mobile}</div>
     </div>
   );
 }

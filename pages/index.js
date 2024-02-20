@@ -234,6 +234,7 @@ export default function Home() {
                     activities={project.activities}
                     skills={project.skills}
                     key={index}
+                    mobile={project.mobile}
                   />
                 </div>
               ))

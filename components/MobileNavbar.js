@@ -39,9 +39,11 @@ export default function MobileNavbar() {
     >
       <div className="w-[90%] flex flex-row justify-between items-center py-4 h-[80px]">
         {isVisible ? (
-          <div className="text-white text-2xl ml-2">Alec Situ</div>
+          <div className="text-white text-2xl ml-2 font-semibold">
+            Alec Situ
+          </div>
         ) : (
-          <div className="text-white text-2xl ml-2">Welcome!</div>
+          <div className="text-white text-2xl ml-2 font-semibold">Welcome!</div>
         )}
 
         <button
