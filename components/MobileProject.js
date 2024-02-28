@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function MobileProject({ name, description, image }) {
+export default function MobileProject({ name, description, link, image }) {
   // Add images?
   return (
     <div
-      className="project-card flex flex-col gap-4 w-72 h-[360px] rounded-xl p-6 overflow-hidden"
+      className="project-card flex flex-col gap-4 w-72 h-[360px] rounded-xl p-6"
       id="projects"
     >
       <div className="card-content flex flex-col gap-4">

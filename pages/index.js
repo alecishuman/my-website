@@ -18,6 +18,7 @@ import cursorSvg from "../public/cursor.svg";
 import downCursor from "../public/down_cursor.svg";
 import ProjectCard from "../components/ProjectCard";
 import MobileNavbar from "../components/MobileNavbar";
+import MobileProject from "../components/MobileProject";
 
 export default function Home() {
   // Stars
@@ -279,13 +280,21 @@ export default function Home() {
             Projects
           </div>
           <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">
-            {pastProjects.map((project) => (
-              <ProjectCard
-                name={project.name}
-                description={project.description}
-                link={project.link}
-              />
-            ))}
+            {pastProjects.map((project) =>
+              windowWidth < 680 ? (
+                <MobileProject
+                  name={project.name}
+                  description={project.description}
+                  link={project.link}
+                />
+              ) : (
+                <ProjectCard
+                  name={project.name}
+                  description={project.description}
+                  link={project.link}
+                />
+              )
+            )}
           </div>
         </div>
         <Footer />

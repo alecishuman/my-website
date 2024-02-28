@@ -9,7 +9,3 @@
 .project-more-btn {
     background-color: var(--primary-blue);
 }
-
-.card-content {
-    transition: transform 0.3s ease-out;
-}
