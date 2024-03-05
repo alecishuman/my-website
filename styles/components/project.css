@@ -2,6 +2,10 @@
     background-color: var(--primary-gray);
 }
 
+.card-content {
+    transition: all 0.3s;
+}
+
 .project-title {
     color: var(--primary-blue);
 }
