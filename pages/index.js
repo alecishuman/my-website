@@ -127,7 +127,7 @@ export default function Home() {
       <Head>
         <title>Alec's Website</title>
       </Head>
-
+      {/* Nightland esk bg */}
       <main>
         {windowWidth < 680 ? <MobileNavbar /> : <Navbar />}
 
@@ -169,6 +169,8 @@ export default function Home() {
           {starArray.map((num, index) => (
             <Star />
           ))}
+
+          {/* Change to background information with overlay */}
           {scrollExp && windowWidth > 1024 && (
             <div className="fixed right-[10vw] bottom-[5vh] z-10 flex flex-col justify-center items-center">
               <div className="scroll-ripple relative">
