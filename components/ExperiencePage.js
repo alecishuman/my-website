@@ -19,10 +19,10 @@ export default function ExperiencePage({
       setTimeout(() => {
         hoverExp(false);
         clickExp(true);
-      }, 4000);
+      }, 2500);
       setTimeout(() => {
         clickExp(false);
-      }, 8000);
+      }, 5000);
     }
   }, [inView]);
   return (

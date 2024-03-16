@@ -116,12 +116,6 @@ export default function Home() {
     }
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setScrollExp(false);
-    }, 6000);
-  }, []);
-
   return (
     <div className="">
       <Head>
@@ -169,30 +163,38 @@ export default function Home() {
           {starArray.map((num, index) => (
             <Star />
           ))}
-
-          {/* Change to background information with overlay */}
-          {scrollExp && windowWidth > 1024 && (
-            <div className="fixed right-[10vw] bottom-[5vh] z-10 flex flex-col justify-center items-center">
-              <div className="scroll-ripple relative">
-                <Image
-                  src={downCursor}
-                  alt="cursor hover"
-                  width={80}
-                  className="z-20 scroll-cursor"
-                />
-              </div>
-
-              <div className="text-[#1AA1DB] px-4 text-2xl font-semibold mt-1">
-                Next Page!
-              </div>
-            </div>
-          )}
         </div>
 
         <div
           className="page h-fit flex flex-col justify-center items-center"
           id="experience"
         >
+          {windowWidth > 1024 && inView && hoverExp && (
+            <div className="experience-overlay">
+              <Image
+                src={cursorSvg}
+                alt="cursor hover"
+                width={40}
+                className="hover-cursor"
+              />
+              <div className="text-white mt-4 text-lg w-fit max-w-[140px] text-center">
+                Hover card to pause
+              </div>
+            </div>
+          )}
+          {windowWidth > 1024 && inView && clickExp && (
+            <div className="experience-overlay">
+              <Image
+                src={downCursor}
+                alt="cursor hover"
+                width={40}
+                className="click-cursor"
+              />
+              <div className="text-white text-lg text-center mt-3">
+                Click for next!
+              </div>
+            </div>
+          )}
           <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8">
             Notable Experience
           </div>
@@ -241,35 +243,6 @@ export default function Home() {
                   />
                 </div>
               ))
-            )}
-
-            {windowWidth > 1024 && inView && hoverExp && (
-              <div className="hover-cursor absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
-                <Image
-                  src={cursorSvg}
-                  alt="cursor hover"
-                  width={50}
-                  className=""
-                />
-                <div className="text-[#1AA1DB] bg-[#232233] px-4 py-2 text-xl font-semibold">
-                  Pause!
-                </div>
-              </div>
-            )}
-            {windowWidth > 1024 && inView && clickExp && (
-              <div className="absolute right-[35vw] bottom-20 z-10 flex flex-col justify-center items-center">
-                <div className="click-ripple relative">
-                  <Image
-                    src={cursorSvg}
-                    alt="cursor hover"
-                    width={50}
-                    className="z-20 click-cursor"
-                  />
-                </div>
-                <div className="text-[#1AA1DB] bg-[#232233] px-4 text-xl font-semibold mt-1">
-                  Next!
-                </div>
-              </div>
             )}
           </div>
         </div>
