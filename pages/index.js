@@ -240,6 +240,7 @@ export default function Home() {
                     skills={project.skills}
                     key={index}
                     mobile={project.mobile}
+                    page={project.page}
                   />
                 </div>
               ))

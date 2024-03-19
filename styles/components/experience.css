@@ -61,7 +61,7 @@
 
 .experience-card {
   background-color: var(--primary-gray);
-  width: 85%;
+  width: 400px;
   height: fit-content;
   min-height: 60vh;
 }
@@ -142,7 +142,7 @@
   }
 
   .experience {
-    width: fit-content;
+    width: 90%;
     display: flex;
     justify-content: center;
   }

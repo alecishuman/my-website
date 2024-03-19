@@ -1,10 +1,14 @@
 import pipeLogo from "../../public/pipeiq_logo.png";
 import launchPadLogo from "../../public/launchpad_logo.png";
 import keseraLogo from "../../public/kesera_logo.png";
+import pipePage from "../../public/pipeiq_page.png";
+import keseraPage from "../../public/kesera_page.png";
+import launchpadPage from "../../public/launchpad_page.png";
 
 export const pastExperience = [
   {
     logo: pipeLogo,
+    page: "pipeiq_page.png",
     title: "Full Stack Developer",
     company: "PipeIQ",
     link: "https://pipeiq.ai/chat-gpt-enterprise",
@@ -20,6 +24,7 @@ export const pastExperience = [
   },
   {
     logo: launchPadLogo,
+    page: "kesera_page.png",
     title: "Developer",
     company: "The C.O.D.E. Initiative",
     link: "",
@@ -35,6 +40,7 @@ export const pastExperience = [
   },
   {
     logo: keseraLogo,
+    page: "launchpad_page.png",
     title: "Lead Developer",
     company: "Kesera",
     link: "https://www.kesera.ca/",
