@@ -13,7 +13,7 @@ function Star() {
   const starStyle = {
     position: "fixed",
     left: Math.floor(Math.random() * (windowWidth - 20) + 20),
-    top: Math.floor(Math.random() * (windowHeight - 40) + 40),
+    top: Math.floor(Math.random() * (windowHeight - 300) + 40),
     width: starSize,
     height: starSize,
     borderRadius: "50%",

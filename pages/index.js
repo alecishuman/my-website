@@ -121,7 +121,7 @@ export default function Home() {
       <Head>
         <title>Alec's Website</title>
       </Head>
-      {/* Nightland esk bg */}
+      {/* Landscape background */}
       <main>
         {windowWidth < 680 ? <MobileNavbar /> : <Navbar />}
 
