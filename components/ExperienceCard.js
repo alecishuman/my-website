@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 export default function ExperienceCard(props) {
-  // Remove card, change to normal background assimilation
-  // Add images
   return (
     <div className="experience-card flex flex-col gap-3 rounded-lg">
       <div className="flex w-full mb-4 h-[200px] overflow-hidden">

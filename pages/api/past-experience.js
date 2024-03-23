@@ -24,7 +24,7 @@ export const pastExperience = [
   },
   {
     logo: launchPadLogo,
-    page: "kesera_page.png",
+    page: "launchpad_page.png",
     title: "Developer",
     company: "The C.O.D.E. Initiative",
     link: "",
@@ -40,7 +40,7 @@ export const pastExperience = [
   },
   {
     logo: keseraLogo,
-    page: "launchpad_page.png",
+    page: "kesera_page.png",
     title: "Lead Developer",
     company: "Kesera",
     link: "https://www.kesera.ca/",
