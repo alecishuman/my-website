@@ -195,7 +195,7 @@ export default function Home() {
               </div>
             </div>
           )}
-          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl xl:text-4xl font-semibold text-center mb-8">
             Notable Experience
           </div>
           <div className="experience-container" ref={experienceRef}>
@@ -252,7 +252,7 @@ export default function Home() {
           className="page flex flex-col justify-center items-center"
           id="projects"
         >
-          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8">
+          <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
             Projects
           </div>
           <div className="projects-container flex flex-row w-4/5 flex-wrap gap-16 justify-center">

@@ -14,6 +14,7 @@ export default function ExperiencePage({
   clickExp,
   inView,
 }) {
+
   useEffect(() => {
     if (inView) {
       setTimeout(() => {
@@ -25,19 +26,20 @@ export default function ExperiencePage({
       }, 5000);
     }
   }, [inView]);
+
   return (
     <div className="experience-page flex flex-row p-8 rounded-2xl">
-      <div className="flex w-1/2 flex-col gap-2 justify-end p-4">
-        <Image src={logo} alt="logo" className="mb-8" width={160} />
-        <div className="experience-title text-xl xl:text-4xl font-semibold">
+      <div className="flex w-1/2 flex-col gap-[6px] justify-end p-4">
+        <Image src={logo} alt="logo" className="mb-8" width={140} />
+        <div className="experience-title text-xl xl:text-3xl font-semibold">
           {title}
         </div>
-        {company && <div className="xl:text-xl">{company}</div>}
-        <div className="italic flex xl:text-lg text-gray-400">{time}</div>
+        {company && <div className="xl:text-lg">{company}</div>}
+        <div className="italic flex text-gray-400">{time}</div>
         {link && (
           <a
             href={link}
-            className="experience-link mt-4 rounded-xl px-5 py-3 w-fit"
+            className="experience-link mt-4 rounded-xl px-5 py-[10px] w-fit font-semibold"
             target="_blank"
             rel="noopener noreferrer"
           >

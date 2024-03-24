@@ -4,7 +4,7 @@ export default function Navbar() {
   const experience = () => document.querySelector("#experience");
   const projects = () => document.querySelector("#projects");
   const contact = () => document.querySelector("#contact");
-  // TODO: Add bubble styling for nav
+  // TODO: Add sliding active element for <navbar></navbar>
   return (
     <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6 z-10 bg-gray-900">
       {/* shrink while scrolling name */}
