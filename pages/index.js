@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ExperienceCard from "../components/ExperienceCard";
-import { pastExperience } from "./api/past-experience";
+import { allProjects } from "./api/past-experience";
 import { pastProjects } from "./api/past-projects";
 import BackToTop from "../components/BackToTop";
 import Star from "../components/Star";
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
           )}
           <div className="experience-page-title text-[var(--secondary-blue)] text-3xl xl:text-4xl font-semibold text-center mb-8">
-            Notable Experience
+            My Projects
           </div>
           <div className="experience-container" ref={experienceRef}>
             {windowWidth > 1024 ? (
@@ -206,10 +206,9 @@ export default function Home() {
                 onMouseEnter={() => setPause(true)}
                 onMouseLeave={() => setPause(false)}
                 onClick={scroll}
-                // onKeyDown={handleSpace}
                 tabIndex="0"
               >
-                {pastExperience.map((project, index) => (
+                {allProjects.map((project, index) => (
                   <div className="experience">
                     <ExperiencePage
                       logo={project.logo}
@@ -228,7 +227,7 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              pastExperience.map((project, index) => (
+              allProjects.map((project, index) => (
                 <div className="experience">
                   <ExperienceCard
                     logo={project.logo}
@@ -249,6 +248,10 @@ export default function Home() {
         </div>
         {windowWidth < 680 && <div className="h-40"></div>}
         <div
+          className="page flex flex-col justify-center items-center"
+          id="timeline"
+        ></div>
+        {/* <div
           className="page flex flex-col justify-center items-center"
           id="projects"
         >
@@ -272,7 +275,7 @@ export default function Home() {
               )
             )}
           </div>
-        </div>
+        </div> */}
         <Footer />
         <BackToTop />
       </main>

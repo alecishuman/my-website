@@ -30,7 +30,8 @@ export default function ExperiencePage({
   return (
     <div className="experience-page flex flex-row p-8 rounded-2xl">
       <div className="flex w-1/2 flex-col gap-[6px] justify-end p-4">
-        <Image src={logo} alt="logo" className="mb-8" width={140} />
+        {logo && <Image src={logo} alt="logo" className="mb-8" width={140} />}
+
         <div className="experience-title text-xl xl:text-3xl font-semibold">
           {title}
         </div>

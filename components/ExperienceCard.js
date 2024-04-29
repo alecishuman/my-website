@@ -4,13 +4,16 @@ import Image from "next/image";
 export default function ExperienceCard(props) {
   return (
     <div className="experience-card flex flex-col gap-3 rounded-lg pb-8">
-      <div className="flex w-full mb-4 overflow-hidden">
-        <Image
-          src={require(`../public/${props.page}`)}
-          className="w-full rounded-t-lg"
-          alt="page image"
-        />
-      </div>
+      {props.logo && (
+        <div className="flex w-full mb-4 overflow-hidden">
+          <Image
+            src={require(`../public/${props.page}`)}
+            className="w-full rounded-t-lg"
+            alt="page image"
+          />
+        </div>
+      )}
+
       <div className="experience-title text-xl font-semibold px-8">
         {props.title}
       </div>

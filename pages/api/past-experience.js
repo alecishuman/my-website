@@ -5,23 +5,7 @@ import pipePage from "../../public/pipeiq_page.png";
 import keseraPage from "../../public/kesera_page.png";
 import launchpadPage from "../../public/launchpad_page.png";
 
-export const pastExperience = [
-  {
-    logo: pipeLogo,
-    page: "pipeiq_page.png",
-    title: "Full Stack Developer",
-    company: "PipeIQ",
-    link: "https://pipeiq.ai/chat-gpt-enterprise",
-    time: "August - December 2023",
-    activities: [
-      "Developed front-end for landing page. Increased web traffic by 200%.",
-      "Built front-end MVP, including pulling data from hundreds of companies using AI and AWS",
-      "Created generative AI algorithms with Open AI for personalized company brand voice",
-    ],
-    mobile:
-      "I was a full stack developer intern at a startup PipeIQ to build their MVP using React, Next, PostgreSQL, AWS, and OpenAI.",
-    skills: ["react", "typescript", "css", "ml", "restapi", "aws"],
-  },
+export const allProjects = [
   {
     logo: launchPadLogo,
     page: "launchpad_page.png",
@@ -53,5 +37,17 @@ export const pastExperience = [
     mobile:
       "I was the lead software developer for the web application at Kesera, mentoring 5 other highschoolers to build a social media application.",
     skills: ["react", "html", "css", "firebase"],
+  },
+  {
+    title: "More To Come...",
+    company: "Just you wait",
+    time: "Secretly building cool stuff",
+    activities: [
+      "Hint 1: I like food",
+      "Hint 2: I like to code",
+      "Hint 3: I like to code food",
+    ],
+    mobile:
+      "This project is still in the works, but I'm excited to share it soon!",
   },
 ];

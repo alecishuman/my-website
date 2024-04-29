@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   const experience = () => document.querySelector("#experience");
-  const projects = () => document.querySelector("#projects");
+  const timeline = () => document.querySelector("#timeline");
   const contact = () => document.querySelector("#contact");
   // TODO: Add sliding active element for <navbar></navbar>
   return (
@@ -19,16 +19,16 @@ export default function Navbar() {
         }}
         className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-xl py-2 hover:cursor-pointer"
       >
-        Experience
+        Projects
       </div>
       <div
         onClick={() => {
-          projects().scrollIntoView({ block: "center", behavior: "smooth" });
-          projects().scrollIntoView({ block: "center", behavior: "smooth" });
+          timeline().scrollIntoView({ block: "center", behavior: "smooth" });
+          timeline().scrollIntoView({ block: "center", behavior: "smooth" });
         }}
         className="navbar-element xl:text-lg mx-2 xl:mx-3 px-4 xl:px-5 rounded-xl py-2 hover:cursor-pointer"
       >
-        Projects
+        Timeline
       </div>
       <div
         onClick={() => {

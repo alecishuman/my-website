@@ -4,7 +4,7 @@ import toggleIcon from "../public/toggle.svg";
 
 export default function MobileNavbar() {
   const experience = () => document.querySelector("#experience");
-  const projects = () => document.querySelector("#projects");
+  const timeline = () => document.querySelector("#timeline");
   const contact = () => document.querySelector("#contact");
 
   const [toggled, setToggled] = useState(false);
@@ -60,16 +60,16 @@ export default function MobileNavbar() {
         }}
         className="mobile-navbar-element"
       >
-        Experience
+        Projects
       </div>
       <div
         onClick={() => {
-          projects().scrollIntoView({ block: "center", behavior: "smooth" });
-          projects().scrollIntoView({ block: "center", behavior: "smooth" });
+          timeline().scrollIntoView({ block: "center", behavior: "smooth" });
+          timeline().scrollIntoView({ block: "center", behavior: "smooth" });
         }}
         className="mobile-navbar-element"
       >
-        Projects
+        Timeline
       </div>
       <div
         onClick={() => {
