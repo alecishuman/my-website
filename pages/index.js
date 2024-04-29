@@ -6,8 +6,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ExperienceCard from "../components/ExperienceCard";
-import { allProjects } from "./api/past-experience";
-import { pastProjects } from "./api/past-projects";
+import { allProjects } from "./api/past-projects";
 import BackToTop from "../components/BackToTop";
 import Star from "../components/Star";
 import ExperiencePage from "../components/ExperiencePage";
@@ -19,6 +18,7 @@ import downCursor from "../public/down_cursor.svg";
 import ProjectCard from "../components/ProjectCard";
 import MobileNavbar from "../components/MobileNavbar";
 import MobileProject from "../components/MobileProject";
+import MyTimeline from "../components/Timeline";
 
 export default function Home() {
   // Stars
@@ -248,9 +248,21 @@ export default function Home() {
         </div>
         {windowWidth < 680 && <div className="h-40"></div>}
         <div
-          className="page flex flex-col justify-center items-center"
+          className="page flex flex-col lg:flex-row justify-center items-center gap-4"
           id="timeline"
-        ></div>
+        >
+          <div className="flex flex-col justify-center items-center w-1/2">
+            <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
+              Timeline
+            </div>
+            <MyTimeline />
+          </div>
+          <div className="flex flex-col justify-center items-center w-1/2">
+            <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
+              My Stack
+            </div>
+          </div>
+        </div>
         {/* <div
           className="page flex flex-col justify-center items-center"
           id="projects"
