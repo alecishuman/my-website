@@ -32,7 +32,7 @@ export default function Home() {
   // Typing Name
   const text = "ALEC SITU";
   const subtitle =
-    "Software Engineer, ML/AI Developer, Full-Stack Web Developer";
+    "Software Engineer, ML/AI Developer, Fullstack Web Developer";
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentSubtitle, setCurrentSubtitle] = useState("");

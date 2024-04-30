@@ -15,8 +15,31 @@ import Typography from "@mui/material/Typography";
 import { timeline } from "../pages/api/timeline-data.js";
 
 export default function MyTimeline() {
+  const nodeColors = (type) => {
+    console.log("hi");
+    switch (type) {
+      case "work":
+        return "secondary";
+      case "research":
+        return "primary";
+      default:
+        return "error";
+    }
+  };
+
+  const titleColors = (type) => {
+    switch (type) {
+      case "work":
+        return "#F39C12";
+      case "research":
+        return "#08E8DE";
+      default:
+        return "#F1C40F";
+    }
+  };
+
   return (
-    <Timeline position="alternate">
+    <Timeline position="alternate" className="bg-[var(--primary-background)]">
       {timeline.map((item, index) => (
         <TimelineItem>
           <TimelineOppositeContent
@@ -28,14 +51,29 @@ export default function MyTimeline() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot variant="outlined"></TimelineDot>
+            <TimelineDot
+              variant="outlined"
+              color={nodeColors(item.type)}
+            ></TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2, minWidth: "200px" }}>
-            <Typography variant="h6" component="span">
+            <Typography
+              component="span"
+              sx={{
+                fontSize: "1.1rem",
+                lineHeight: "1.2",
+                fontWeight: "600",
+                letterSpacing: "0.5px",
+                color: titleColors(item.type),
+              }}
+            >
               {item.title}
             </Typography>
-            <Typography sx={{ marginTop: "4px" }} variant="subtitle2">
+            <Typography
+              sx={{ marginTop: "4px", color: titleColors(item.type) }}
+              variant="subtitle2"
+            >
               {item.subtitle}
             </Typography>
           </TimelineContent>
