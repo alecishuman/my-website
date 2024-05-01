@@ -6,20 +6,16 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import HotelIcon from "@mui/icons-material/Hotel";
-import RepeatIcon from "@mui/icons-material/Repeat";
+import WorkIcon from "@mui/icons-material/Work";
 import Typography from "@mui/material/Typography";
 
 import { timeline } from "../pages/api/timeline-data.js";
 
 export default function MyTimeline() {
   const nodeColors = (type) => {
-    console.log("hi");
     switch (type) {
       case "work":
-        return "secondary";
+        return "success";
       case "research":
         return "primary";
       default:
@@ -30,11 +26,22 @@ export default function MyTimeline() {
   const titleColors = (type) => {
     switch (type) {
       case "work":
-        return "#F39C12";
+        return "#ed974f";
       case "research":
-        return "#08E8DE";
+        return "#a0ecb1";
       default:
-        return "#F1C40F";
+        return "#efa8b0";
+    }
+  };
+
+  const subtitleColors = (type) => {
+    switch (type) {
+      case "work":
+        return "#fceed8";
+      case "research":
+        return "#d5faf1";
+      default:
+        return "#fbe5e6";
     }
   };
 
@@ -43,7 +50,10 @@ export default function MyTimeline() {
       {timeline.map((item, index) => (
         <TimelineItem>
           <TimelineOppositeContent
-            sx={{ m: "auto 0", minWidth: "200px" }}
+            sx={{
+              m: "auto 0",
+              minWidth: "200px",
+            }}
             align="right"
             variant="body2"
           >
@@ -53,7 +63,7 @@ export default function MyTimeline() {
             <TimelineConnector />
             <TimelineDot
               variant="outlined"
-              color={nodeColors(item.type)}
+              // color={nodeColors(item.type)}
             ></TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
@@ -71,7 +81,7 @@ export default function MyTimeline() {
               {item.title}
             </Typography>
             <Typography
-              sx={{ marginTop: "4px", color: titleColors(item.type) }}
+              sx={{ marginTop: "4px", color: subtitleColors(item.type) }}
               variant="subtitle2"
             >
               {item.subtitle}
