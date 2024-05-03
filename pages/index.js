@@ -19,6 +19,7 @@ import ProjectCard from "../components/ProjectCard";
 import MobileNavbar from "../components/MobileNavbar";
 import MobileProject from "../components/MobileProject";
 import MyTimeline from "../components/Timeline";
+import StackLogo from "../components/StackLogo";
 
 export default function Home() {
   // Stars
@@ -115,6 +116,19 @@ export default function Home() {
       };
     }
   });
+
+  // Tech stack logos
+  const logoUrl = [
+    "react.png",
+    "css.png",
+    "html.png",
+    "javascript.png",
+    "aws.jpg",
+    "node.png",
+    "postgres.png",
+    "python.png",
+    "java.png",
+  ];
 
   return (
     <div className="">
@@ -260,6 +274,11 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center w-1/2">
             <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
               My Stack
+            </div>
+            <div className="flex flex-row flex-wrap gap-12 w-[600px] justify-center items-center">
+              {logoUrl.map((path) => (
+                <StackLogo logo={path} />
+              ))}
             </div>
           </div>
         </div>
