@@ -118,16 +118,17 @@ export default function Home() {
   });
 
   // Tech stack logos
-  const logoUrl = [
-    "react.png",
-    "css.png",
-    "html.png",
-    "javascript.png",
-    "aws.jpg",
-    "node.png",
-    "postgres.png",
-    "python.png",
-    "java.png",
+
+  const techStack = [
+    "React",
+    "CSS",
+    "HTML",
+    "Javascript",
+    "AWS",
+    "Node.js",
+    "PostgreSQL",
+    "Python",
+    "Java",
   ];
 
   return (
@@ -261,24 +262,23 @@ export default function Home() {
           </div>
         </div>
         {windowWidth < 680 && <div className="h-40"></div>}
-        <div
-          className="page flex flex-col lg:flex-row justify-center items-center gap-4"
-          id="timeline"
-        >
-          <div className="flex flex-col justify-center items-center w-1/2">
-            <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
-              Timeline
+        <div className="page flex justify-center items-center" id="timeline">
+          <div className="logos-container flex flex-col lg:flex-row justify-center items-center h-full gap-4">
+            <div className="flex flex-col justify-center items-center w-1/2">
+              <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
+                Timeline
+              </div>
+              <MyTimeline />
             </div>
-            <MyTimeline />
-          </div>
-          <div className="flex flex-col justify-center items-center w-1/2">
-            <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
-              My Stack
-            </div>
-            <div className="flex flex-row flex-wrap gap-12 w-[600px] justify-center items-center">
-              {logoUrl.map((path) => (
-                <StackLogo logo={path} />
-              ))}
+            <div className="flex flex-col justify-center items-center w-1/2">
+              {/* <div className="experience-page-title text-[var(--secondary-blue)] text-3xl lg:text-4xl font-semibold text-center mb-8 max-lg:mt-40">
+                My Stack
+              </div> */}
+              <div className="flex flex-row flex-wrap gap-10 w-[600px] justify-center items-center">
+                {techStack.map((name) => (
+                  <StackLogo name={name} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
