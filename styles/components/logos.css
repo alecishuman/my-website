@@ -13,7 +13,7 @@
         inset 0 0 0 transparent,
         inset 0 0 0 transparent,
         inset 0 0 0 transparent,
-        0 0 20px rgba(192, 192, 192, 0.5);
+        0 0 7px rgba(192, 192, 192, 0.2);
     /* 0 0 20px silver; */
     transition: box-shadow ease-in-out .6s, color ease-in-out .5s;
     width: var(--itemWidth);
@@ -22,6 +22,7 @@
     border-radius: 50%;
     cursor: pointer;
     color: transparent;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,43 +36,43 @@
         inset var(--itemWidth) var(--itemWidthMinus) 0 green,
         inset var(--itemWidthMinus) var(--itemWidth) 0 blue,
         inset var(--itemWidth) var(--itemWidth) 0 yellow,
-        0 0 20px rgba(192, 192, 192, 0.5);
+        0 0 25px rgba(192, 192, 192, 0.5);
 
 }
 
 
 .logo:first-of-type {
-    background: var(--primary-gray) url("../../public/tech-stack/react.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/react.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(2) {
-    background: var(--primary-gray) url("../../public/tech-stack/css.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/css.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(3) {
-    background: var(--primary-gray) url("../../public/tech-stack/html.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/html.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(4) {
-    background: var(--primary-gray) url("../../public/tech-stack/javascript.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/javascript.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(5) {
-    background: var(--primary-gray) url("../../public/tech-stack/aws.jpg") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/aws.jpg") center/50% no-repeat;
 }
 
 .logo:nth-of-type(6) {
-    background: var(--primary-gray) url("../../public/tech-stack/node.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/node.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(7) {
-    background: var(--primary-gray) url("../../public/tech-stack/postgres.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/postgres.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(8) {
-    background: var(--primary-gray) url("../../public/tech-stack/python.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/python.png") center/50% no-repeat;
 }
 
 .logo:nth-of-type(9) {
-    background: var(--primary-gray) url("../../public/tech-stack/java.png") center/50% no-repeat;
+    background: transparent url("../../public/tech-stack/java.png") center/50% no-repeat;
 }
