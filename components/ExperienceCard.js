@@ -14,7 +14,11 @@ export default function ExperienceCard(props) {
         </div>
       )}
 
-      <div className="experience-title text-xl font-semibold px-8">
+      <div
+        className={"experience-title text-xl font-semibold px-8 ".concat(
+          !props.logo && "pt-8"
+        )}
+      >
         {props.title}
       </div>
       {props.company && (

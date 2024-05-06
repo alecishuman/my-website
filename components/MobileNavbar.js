@@ -33,7 +33,7 @@ export default function MobileNavbar() {
 
   return (
     <div
-      className={"fixed flex flex-col w-full items-center z-[100] bg-gray-900 overflow-hidden transition-all duration-150 ".concat(
+      className={"fixed flex flex-col w-[100vw] items-center z-[100] bg-gray-900 overflow-hidden transition-all duration-150 ".concat(
         toggled ? " max-h-[242px]" : "max-h-[80px]"
       )}
     >

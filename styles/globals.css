@@ -132,7 +132,7 @@ main div {
   }
 
   .page {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
