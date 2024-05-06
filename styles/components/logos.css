@@ -77,10 +77,10 @@
     background: transparent url("../../public/tech-stack/java.png") center/50% no-repeat;
 }
 
-/* 
+
 @media screen and (max-width: 1024px) {
     :root {
         --itemWidth: 6rem;
         --itemWidthMinus: -6rem;
     }
-} */
+}
