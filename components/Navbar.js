@@ -6,7 +6,7 @@ export default function Navbar() {
   const contact = () => document.querySelector("#contact");
   // TODO: Add sliding active element for <navbar></navbar>
   return (
-    <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6 z-10 bg-gray-900">
+    <div className="fixed flex flex-row align-middle justify-end w-full pr-2 py-6 z-10 bg-transparent]">
       {/* shrink while scrolling name */}
       {/* <a href="" className="navbar-element xl:text-lg px-4 xl:px-6">
         About

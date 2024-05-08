@@ -26,7 +26,6 @@ body {
   letter-spacing: 0.1rem;
   color: white;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   overflow-x: hidden;
 }
 
@@ -63,6 +62,10 @@ button {
 
 main div {
   z-index: 1;
+}
+
+.page {
+  background: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 /* Main page */
@@ -143,6 +146,10 @@ main div {
     position: relative;
     top: 15vh;
     left: 18vw;
+  }
+
+  .home-page {
+    background: linear-gradient(180deg, #111827 20%, #232233 100%);
   }
 }
 
