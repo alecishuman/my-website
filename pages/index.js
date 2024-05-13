@@ -261,7 +261,9 @@ export default function Home() {
             )}
           </div>
         </div>
-        {windowWidth < 680 && <div className="h-40"></div>}
+        {windowWidth < 680 && (
+          <div className="h-40 bg-[var(--primary-background)]"></div>
+        )}
         <div className="page flex justify-center items-center" id="timeline">
           <div className="logos-container flex flex-col lg:flex-row justify-center items-center h-full gap-4">
             <div className="flex flex-col justify-center items-center lg:w-1/2">

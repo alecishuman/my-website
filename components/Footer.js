@@ -26,7 +26,7 @@ export default function Footer() {
     // Add more logos as needed
   ];
   return (
-    <div className="page footer-container flex flex-row items-center justify-center  max-lg:mt-40">
+    <div className="page footer-container flex flex-row items-center justify-center  max-lg:pt-40">
       <footer className="h-fit w-10/12 max-w-[1000px] mt-12 flex flex-col justify-center">
         {windowWidth > 640 ? <ContactForm /> : <MobileContactForm />}
 
