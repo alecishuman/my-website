@@ -102,7 +102,7 @@ main div {
     repeating-linear-gradient(90deg, currentColor 0 10px, #0000 0 15px) 0/0% no-repeat content-box content-box;
   position: relative;
   box-sizing: border-box;
-  animation: l5 3.2s infinite steps(6);
+  animation: l5 3.0s infinite steps(6);
 }
 
 .loader::before {
