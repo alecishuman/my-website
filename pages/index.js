@@ -22,6 +22,13 @@ import MyTimeline from "../components/Timeline";
 import StackLogo from "../components/StackLogo";
 
 export default function Home() {
+  // Loading opacity
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementsByClassName("home-page")[0].style.opacity = 1;
+    }, 3200);
+  }, []);
+
   // Stars
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {

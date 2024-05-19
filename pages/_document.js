@@ -10,7 +10,7 @@ export default function Document() {
       </body>
       <div id="globalLoader">
         <div className="loader"></div>
-        <div>Please wait while we charge the site</div>
+        <div>Please wait while the site is charging</div>
       </div>
     </Html>
   );
